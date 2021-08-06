@@ -11,7 +11,7 @@ final class RepoListVCReactor: Reactor {
   }
   
   struct State: Equatable {
-    
+    let test: [String] = ["1", "2", "3"]
   }
   
   enum Action: Equatable {
