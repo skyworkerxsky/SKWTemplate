@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4954724626BD07500025B227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954724526BD07500025B227 /* AppDelegate.swift */; };
+		4954724826BD07500025B227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954724726BD07500025B227 /* SceneDelegate.swift */; };
+		4954724A26BD07500025B227 /* RepoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954724926BD07500025B227 /* RepoListVC.swift */; };
+		4954724F26BD07520025B227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4954724E26BD07520025B227 /* Assets.xcassets */; };
+		4954725226BD07520025B227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4954725026BD07520025B227 /* LaunchScreen.storyboard */; };
+		4954725F26BD0A0F0025B227 /* RepoListReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954725E26BD0A0F0025B227 /* RepoListReactor.swift */; };
+		4954726126BD0B500025B227 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4954726026BD0B500025B227 /* Main.storyboard */; };
+		FB3EA090C47789F6C7ADE8AF /* Pods_SKWTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7047BDA3DB7FA8A402043FF1 /* Pods_SKWTemplate.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3229FE03391E42580DC10C52 /* Pods-SKWTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKWTemplate.debug.xcconfig"; path = "Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate.debug.xcconfig"; sourceTree = "<group>"; };
+		4954724226BD07500025B227 /* SKWTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKWTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4954724526BD07500025B227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4954724726BD07500025B227 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4954724926BD07500025B227 /* RepoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListVC.swift; sourceTree = "<group>"; };
+		4954724E26BD07520025B227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4954725126BD07520025B227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4954725326BD07520025B227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4954725E26BD0A0F0025B227 /* RepoListReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListReactor.swift; sourceTree = SOURCE_ROOT; };
+		4954726026BD0B500025B227 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7047BDA3DB7FA8A402043FF1 /* Pods_SKWTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKWTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91B485D825E43CAB0FD8330B /* Pods-SKWTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKWTemplate.release.xcconfig"; path = "Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4954723F26BD07500025B227 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB3EA090C47789F6C7ADE8AF /* Pods_SKWTemplate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		104544A65BA067C85A400DDD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3229FE03391E42580DC10C52 /* Pods-SKWTemplate.debug.xcconfig */,
+				91B485D825E43CAB0FD8330B /* Pods-SKWTemplate.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4954723926BD07500025B227 = {
+			isa = PBXGroup;
+			children = (
+				4954724426BD07500025B227 /* SKWTemplate */,
+				4954724326BD07500025B227 /* Products */,
+				104544A65BA067C85A400DDD /* Pods */,
+				989C7E1C7AE19CE696CCA36A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4954724326BD07500025B227 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4954724226BD07500025B227 /* SKWTemplate.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4954724426BD07500025B227 /* SKWTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				4954725926BD07610025B227 /* SKWApp */,
+				4954725A26BD07710025B227 /* Screen */,
+				4954725B26BD07850025B227 /* Resources */,
+			);
+			path = SKWTemplate;
+			sourceTree = "<group>";
+		};
+		4954725926BD07610025B227 /* SKWApp */ = {
+			isa = PBXGroup;
+			children = (
+				4954724526BD07500025B227 /* AppDelegate.swift */,
+				4954724726BD07500025B227 /* SceneDelegate.swift */,
+			);
+			path = SKWApp;
+			sourceTree = "<group>";
+		};
+		4954725A26BD07710025B227 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				4954725C26BD09A80025B227 /* RepoList */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		4954725B26BD07850025B227 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4954724E26BD07520025B227 /* Assets.xcassets */,
+				4954725026BD07520025B227 /* LaunchScreen.storyboard */,
+				4954725326BD07520025B227 /* Info.plist */,
+				4954726026BD0B500025B227 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4954725C26BD09A80025B227 /* RepoList */ = {
+			isa = PBXGroup;
+			children = (
+				4954724926BD07500025B227 /* RepoListVC.swift */,
+				4954725E26BD0A0F0025B227 /* RepoListReactor.swift */,
+			);
+			path = RepoList;
+			sourceTree = "<group>";
+		};
+		989C7E1C7AE19CE696CCA36A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7047BDA3DB7FA8A402043FF1 /* Pods_SKWTemplate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4954724126BD07500025B227 /* SKWTemplate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4954725626BD07520025B227 /* Build configuration list for PBXNativeTarget "SKWTemplate" */;
+			buildPhases = (
+				CF77838FE4CC0E2E01D50168 /* [CP] Check Pods Manifest.lock */,
+				4954723E26BD07500025B227 /* Sources */,
+				4954723F26BD07500025B227 /* Frameworks */,
+				4954724026BD07500025B227 /* Resources */,
+				3D4680D19BC124C784A63853 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SKWTemplate;
+			productName = SKWTemplate;
+			productReference = 4954724226BD07500025B227 /* SKWTemplate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4954723A26BD07500025B227 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					4954724126BD07500025B227 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 4954723D26BD07500025B227 /* Build configuration list for PBXProject "SKWTemplate" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4954723926BD07500025B227;
+			productRefGroup = 4954724326BD07500025B227 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4954724126BD07500025B227 /* SKWTemplate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4954724026BD07500025B227 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4954726126BD0B500025B227 /* Main.storyboard in Resources */,
+				4954725226BD07520025B227 /* LaunchScreen.storyboard in Resources */,
+				4954724F26BD07520025B227 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D4680D19BC124C784A63853 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF77838FE4CC0E2E01D50168 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SKWTemplate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4954723E26BD07500025B227 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4954724A26BD07500025B227 /* RepoListVC.swift in Sources */,
+				4954724626BD07500025B227 /* AppDelegate.swift in Sources */,
+				4954725F26BD0A0F0025B227 /* RepoListReactor.swift in Sources */,
+				4954724826BD07500025B227 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4954725026BD07520025B227 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4954725126BD07520025B227 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4954725426BD07520025B227 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4954725526BD07520025B227 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4954725726BD07520025B227 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3229FE03391E42580DC10C52 /* Pods-SKWTemplate.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CKWSAD96UP;
+				INFOPLIST_FILE = SKWTemplate/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = a.v.makarov.SKWTemplate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4954725826BD07520025B227 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91B485D825E43CAB0FD8330B /* Pods-SKWTemplate.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CKWSAD96UP;
+				INFOPLIST_FILE = SKWTemplate/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = a.v.makarov.SKWTemplate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4954723D26BD07500025B227 /* Build configuration list for PBXProject "SKWTemplate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4954725426BD07520025B227 /* Debug */,
+				4954725526BD07520025B227 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4954725626BD07520025B227 /* Build configuration list for PBXNativeTarget "SKWTemplate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4954725726BD07520025B227 /* Debug */,
+				4954725826BD07520025B227 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4954723A26BD07500025B227 /* Project object */;
+}
