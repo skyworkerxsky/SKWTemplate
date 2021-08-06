@@ -11,9 +11,7 @@ final class RepoListVCReactor: Reactor {
   }
   
   struct State: Equatable {
-    var page: Int = 1
-    var pages: Int = 0
-    public var repos: [String] = []
+    
   }
   
   enum Action: Equatable {
@@ -21,8 +19,7 @@ final class RepoListVCReactor: Reactor {
   }
   
   enum Mutation: Equatable {
-    case setRepos([String])
-    case addRepos([String])
+    
   }
   
   func mutate(action: Action) -> Observable<Mutation> {
@@ -39,15 +36,12 @@ final class RepoListVCReactor: Reactor {
   }
   
   func reduce(state: State, mutation: Mutation) -> State {
+    var newState = state
+    
     switch mutation {
-    case let .setRepos(repos):
-      var newState = state
-      newState.repos = repos
-      return newState
-    case let .addRepos(repos):
-      var newState = state
-      newState.repos += repos
-      return newState
+    default: break
     }
+    
+    return newState
   }
 }
