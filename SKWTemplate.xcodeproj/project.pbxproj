@@ -14,11 +14,11 @@
 		4954725226BD07520025B227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4954725026BD07520025B227 /* LaunchScreen.storyboard */; };
 		4954725F26BD0A0F0025B227 /* RepoListReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954725E26BD0A0F0025B227 /* RepoListReactor.swift */; };
 		4954726126BD0B500025B227 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4954726026BD0B500025B227 /* Main.storyboard */; };
-		FB3EA090C47789F6C7ADE8AF /* Pods_SKWTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7047BDA3DB7FA8A402043FF1 /* Pods_SKWTemplate.framework */; };
+		49F4D18E26BD5D8B00F26C0C /* RepoListVC+Bind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4D18D26BD5D8B00F26C0C /* RepoListVC+Bind.swift */; };
+		631ECCDDCF1F80F3F0213426 /* Pods_SKWTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513F8B4E9FD396D39EAC15AE /* Pods_SKWTemplate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3229FE03391E42580DC10C52 /* Pods-SKWTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKWTemplate.debug.xcconfig"; path = "Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		4954724226BD07500025B227 /* SKWTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKWTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4954724526BD07500025B227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4954724726BD07500025B227 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,8 +28,10 @@
 		4954725326BD07520025B227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4954725E26BD0A0F0025B227 /* RepoListReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListReactor.swift; sourceTree = SOURCE_ROOT; };
 		4954726026BD0B500025B227 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		7047BDA3DB7FA8A402043FF1 /* Pods_SKWTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKWTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		91B485D825E43CAB0FD8330B /* Pods-SKWTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKWTemplate.release.xcconfig"; path = "Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate.release.xcconfig"; sourceTree = "<group>"; };
+		49F4D18D26BD5D8B00F26C0C /* RepoListVC+Bind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoListVC+Bind.swift"; sourceTree = "<group>"; };
+		513F8B4E9FD396D39EAC15AE /* Pods_SKWTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKWTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		853878D99CFE2672B412382C /* Pods-SKWTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKWTemplate.debug.xcconfig"; path = "Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate.debug.xcconfig"; sourceTree = "<group>"; };
+		EF37E544A41F780AAC895891 /* Pods-SKWTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKWTemplate.release.xcconfig"; path = "Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB3EA090C47789F6C7ADE8AF /* Pods_SKWTemplate.framework in Frameworks */,
+				631ECCDDCF1F80F3F0213426 /* Pods_SKWTemplate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,8 +49,8 @@
 		104544A65BA067C85A400DDD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3229FE03391E42580DC10C52 /* Pods-SKWTemplate.debug.xcconfig */,
-				91B485D825E43CAB0FD8330B /* Pods-SKWTemplate.release.xcconfig */,
+				853878D99CFE2672B412382C /* Pods-SKWTemplate.debug.xcconfig */,
+				EF37E544A41F780AAC895891 /* Pods-SKWTemplate.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -59,7 +61,7 @@
 				4954724426BD07500025B227 /* SKWTemplate */,
 				4954724326BD07500025B227 /* Products */,
 				104544A65BA067C85A400DDD /* Pods */,
-				989C7E1C7AE19CE696CCA36A /* Frameworks */,
+				C496E3073D3654C2D6C7E39E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +76,7 @@
 		4954724426BD07500025B227 /* SKWTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				49F4D19026BD642800F26C0C /* Tools */,
 				4954725926BD07610025B227 /* SKWApp */,
 				4954725A26BD07710025B227 /* Screen */,
 				4954725B26BD07850025B227 /* Resources */,
@@ -114,14 +117,22 @@
 			children = (
 				4954724926BD07500025B227 /* RepoListVC.swift */,
 				4954725E26BD0A0F0025B227 /* RepoListReactor.swift */,
+				49F4D18D26BD5D8B00F26C0C /* RepoListVC+Bind.swift */,
 			);
 			path = RepoList;
 			sourceTree = "<group>";
 		};
-		989C7E1C7AE19CE696CCA36A /* Frameworks */ = {
+		49F4D19026BD642800F26C0C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				7047BDA3DB7FA8A402043FF1 /* Pods_SKWTemplate.framework */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		C496E3073D3654C2D6C7E39E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				513F8B4E9FD396D39EAC15AE /* Pods_SKWTemplate.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,11 +144,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4954725626BD07520025B227 /* Build configuration list for PBXNativeTarget "SKWTemplate" */;
 			buildPhases = (
-				CF77838FE4CC0E2E01D50168 /* [CP] Check Pods Manifest.lock */,
+				2125DFBF9BAD8E4C484B517C /* [CP] Check Pods Manifest.lock */,
 				4954723E26BD07500025B227 /* Sources */,
 				4954723F26BD07500025B227 /* Frameworks */,
 				4954724026BD07500025B227 /* Resources */,
-				3D4680D19BC124C784A63853 /* [CP] Embed Pods Frameworks */,
+				7382FC24703F3D3F7C8FD07A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,24 +205,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3D4680D19BC124C784A63853 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CF77838FE4CC0E2E01D50168 /* [CP] Check Pods Manifest.lock */ = {
+		2125DFBF9BAD8E4C484B517C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -233,6 +227,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7382FC24703F3D3F7C8FD07A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -242,6 +253,7 @@
 			files = (
 				4954724A26BD07500025B227 /* RepoListVC.swift in Sources */,
 				4954724626BD07500025B227 /* AppDelegate.swift in Sources */,
+				49F4D18E26BD5D8B00F26C0C /* RepoListVC+Bind.swift in Sources */,
 				4954725F26BD0A0F0025B227 /* RepoListReactor.swift in Sources */,
 				4954724826BD07500025B227 /* SceneDelegate.swift in Sources */,
 			);
@@ -379,7 +391,7 @@
 		};
 		4954725726BD07520025B227 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3229FE03391E42580DC10C52 /* Pods-SKWTemplate.debug.xcconfig */;
+			baseConfigurationReference = 853878D99CFE2672B412382C /* Pods-SKWTemplate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -399,7 +411,7 @@
 		};
 		4954725826BD07520025B227 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91B485D825E43CAB0FD8330B /* Pods-SKWTemplate.release.xcconfig */;
+			baseConfigurationReference = EF37E544A41F780AAC895891 /* Pods-SKWTemplate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

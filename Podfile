@@ -12,5 +12,7 @@ target 'SKWTemplate' do
   
   pod 'Alamofire', '5.2.1'
   pod 'Moya', '14.0.0'
+  
+  pod 'YogaKit', '~> 1.7'
 
 end

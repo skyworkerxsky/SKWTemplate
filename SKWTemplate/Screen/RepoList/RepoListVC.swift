@@ -1,22 +1,40 @@
 import UIKit
-import ReactorKit
-import RxCocoa
 import RxSwift
+import YogaKit
 
-class RepoListVC: UIViewController, View {
+class RepoListVC: UIViewController {
   
   var disposeBag = DisposeBag()
+  
+  private(set) lazy var testBtn: UIButton = .init()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    view.backgroundColor = .red
+    view.backgroundColor = .white
+    testBtn.backgroundColor = .red
+    
+    view.addSubview(testBtn)
   }
   
-  func bind(reactor: RepoListVCReactor) {
-    let state = reactor.state.distinctUntilChanged().share(replay: 1)
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
     
-
+    view.configureLayout { layout in
+      layout.isEnabled = true
+      layout.width = 100%
+      layout.height = 100%
+      layout.justifyContent = .center
+      layout.alignItems = .center
+    }
+    
+    testBtn.configureLayout { layout in
+      layout.isEnabled = true
+      layout.width = 50
+      layout.height = 50
+    }
+    
+    view.yoga.applyLayout(preservingOrigin: true)
   }
-}
 
+}
