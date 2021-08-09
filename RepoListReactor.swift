@@ -10,7 +10,7 @@ final class RepoListVCReactor: Reactor {
   private let bag = DisposeBag()
   private let provider = MoyaProvider<RepositoryService>()
   
-  // MARK: - Internal
+  // MARK: - Initial
   
   internal let initialState: RepoListVCReactor.State
   
@@ -23,7 +23,7 @@ final class RepoListVCReactor: Reactor {
   // MARK: - State
   
   struct State: Equatable {
-    var test: [String] = ["4", "8", "11"]
+    var test: [Repo] = []
   }
   
   // MARK: - Action
@@ -35,26 +35,23 @@ final class RepoListVCReactor: Reactor {
   // MARK: - Mutation
   
   public enum Mutation: Equatable {
-    case setRepos([String] = [])
+    case setRepos([Repo] = [])
     case addRepos
+  }
+  
+  func transform(action: Observable<Action>) -> Observable<Action> {
+    action
+      .startWith(.getRepos)
   }
   
   func mutate(action: Action) -> Observable<Mutation> {
     
     switch action {
     case .getRepos:
-      search()
-        .subscribe(onNext: { items in
-          _ = items
-        })
-        .disposed(by: bag)
-      return .never()
+      return Observable.merge([
+        self.search().map { .setRepos($0) }
+      ])
     }
-  }
-  
-  func transform(action: Observable<Action>) -> Observable<Action> {
-    action
-      .startWith(.getRepos)
   }
   
   func reduce(state: State, mutation: Mutation) -> State {
@@ -69,7 +66,7 @@ final class RepoListVCReactor: Reactor {
     return newState
   }
   
- // MARK: - Method
+ // MARK: - Methods
   
   private func search() -> Observable<[Repo]> {
     provider.rx

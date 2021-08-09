@@ -8,7 +8,7 @@ extension RepoListVC: View {
     
     reactor.state.map(\.test)
       .bind(to: tableView.rx.items(cellIdentifier: "cell")) { indexPath, repo, cell in
-        cell.textLabel?.text = repo
+        cell.textLabel?.text = repo.name
       }
       .disposed(by: disposeBag)
     
