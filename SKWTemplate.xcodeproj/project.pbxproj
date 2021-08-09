@@ -18,7 +18,7 @@
 		4954725F26BD0A0F0025B227 /* RepoListReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954725E26BD0A0F0025B227 /* RepoListReactor.swift */; };
 		4954726126BD0B500025B227 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4954726026BD0B500025B227 /* Main.storyboard */; };
 		49F4D18E26BD5D8B00F26C0C /* RepoListVC+Bind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4D18D26BD5D8B00F26C0C /* RepoListVC+Bind.swift */; };
-		631ECCDDCF1F80F3F0213426 /* Pods_SKWTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513F8B4E9FD396D39EAC15AE /* Pods_SKWTemplate.framework */; };
+		8B2E761AC3F3E5C82AFB967A /* Pods_SKWTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D22C504F7AB03410478805 /* Pods_SKWTemplate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +35,9 @@
 		4954725E26BD0A0F0025B227 /* RepoListReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListReactor.swift; sourceTree = SOURCE_ROOT; };
 		4954726026BD0B500025B227 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		49F4D18D26BD5D8B00F26C0C /* RepoListVC+Bind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoListVC+Bind.swift"; sourceTree = "<group>"; };
-		513F8B4E9FD396D39EAC15AE /* Pods_SKWTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKWTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		853878D99CFE2672B412382C /* Pods-SKWTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKWTemplate.debug.xcconfig"; path = "Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate.debug.xcconfig"; sourceTree = "<group>"; };
-		EF37E544A41F780AAC895891 /* Pods-SKWTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKWTemplate.release.xcconfig"; path = "Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate.release.xcconfig"; sourceTree = "<group>"; };
+		95A269BEED5DCF1F865C2680 /* Pods-SKWTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKWTemplate.release.xcconfig"; path = "Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate.release.xcconfig"; sourceTree = "<group>"; };
+		F0484C8379221504C38C5E3A /* Pods-SKWTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKWTemplate.debug.xcconfig"; path = "Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate.debug.xcconfig"; sourceTree = "<group>"; };
+		F2D22C504F7AB03410478805 /* Pods_SKWTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKWTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				631ECCDDCF1F80F3F0213426 /* Pods_SKWTemplate.framework in Frameworks */,
+				8B2E761AC3F3E5C82AFB967A /* Pods_SKWTemplate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,8 +55,8 @@
 		104544A65BA067C85A400DDD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				853878D99CFE2672B412382C /* Pods-SKWTemplate.debug.xcconfig */,
-				EF37E544A41F780AAC895891 /* Pods-SKWTemplate.release.xcconfig */,
+				F0484C8379221504C38C5E3A /* Pods-SKWTemplate.debug.xcconfig */,
+				95A269BEED5DCF1F865C2680 /* Pods-SKWTemplate.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -109,7 +109,7 @@
 				4954724426BD07500025B227 /* SKWTemplate */,
 				4954724326BD07500025B227 /* Products */,
 				104544A65BA067C85A400DDD /* Pods */,
-				C496E3073D3654C2D6C7E39E /* Frameworks */,
+				B6ECE3131DC222A77476F055 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,10 +170,10 @@
 			path = RepoList;
 			sourceTree = "<group>";
 		};
-		C496E3073D3654C2D6C7E39E /* Frameworks */ = {
+		B6ECE3131DC222A77476F055 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				513F8B4E9FD396D39EAC15AE /* Pods_SKWTemplate.framework */,
+				F2D22C504F7AB03410478805 /* Pods_SKWTemplate.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -185,11 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4954725626BD07520025B227 /* Build configuration list for PBXNativeTarget "SKWTemplate" */;
 			buildPhases = (
-				2125DFBF9BAD8E4C484B517C /* [CP] Check Pods Manifest.lock */,
+				C9F5A164B3CE0266209D5ADB /* [CP] Check Pods Manifest.lock */,
 				4954723E26BD07500025B227 /* Sources */,
 				4954723F26BD07500025B227 /* Frameworks */,
 				4954724026BD07500025B227 /* Resources */,
-				7382FC24703F3D3F7C8FD07A /* [CP] Embed Pods Frameworks */,
+				EF9556632FBFC81C5D9E4FDD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,7 +246,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2125DFBF9BAD8E4C484B517C /* [CP] Check Pods Manifest.lock */ = {
+		C9F5A164B3CE0266209D5ADB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -268,7 +268,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7382FC24703F3D3F7C8FD07A /* [CP] Embed Pods Frameworks */ = {
+		EF9556632FBFC81C5D9E4FDD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -435,7 +435,7 @@
 		};
 		4954725726BD07520025B227 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 853878D99CFE2672B412382C /* Pods-SKWTemplate.debug.xcconfig */;
+			baseConfigurationReference = F0484C8379221504C38C5E3A /* Pods-SKWTemplate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -455,7 +455,7 @@
 		};
 		4954725826BD07520025B227 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF37E544A41F780AAC895891 /* Pods-SKWTemplate.release.xcconfig */;
+			baseConfigurationReference = 95A269BEED5DCF1F865C2680 /* Pods-SKWTemplate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

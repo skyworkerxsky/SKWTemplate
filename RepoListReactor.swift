@@ -14,7 +14,7 @@ final class RepoListVCReactor: Reactor {
   }
   
   struct State: Equatable {
-    var test: [String] = []
+    var test: [String] = ["4", "8", "11"]
   }
   
   enum Action: Equatable {
@@ -28,42 +28,14 @@ final class RepoListVCReactor: Reactor {
   
   func mutate(action: Action) -> Observable<Mutation> {
     
-    var resu: [String] = ["4", "8", "16"]
-    
     switch action {
     case .getRepos:
-      return
-      
-//      provider.request(.repositories) { result in
-//        switch result {
-//        case .success(let response):
-//          let data = try! JSONDecoder().decode(RepoResponse.self, from: response.data)
-//          resu = data.items.compactMap { String($0.name) }
-//        case .failure:
-//          print("fail")
-//        }
-//      }
-      
-//      return .just(.setRepos(resu))
-//      return .never()
-    
-      let provider = RxMoyaProvider<MoyaExampleService>()
-          provider.request(.getRestaurants())
-              .mapObject(RestaurantsResponse.self)
-              .catchError { error in
-                  // Do something with error
-                  return Observable.error(error)
-              }
-              .subscribe(
-                  onNext: { response in
-                      self.restaurants = response.data
-                  }
-              )
-              .addDisposableTo(disposeBag)
+      print("get repos")
+      return .never()
     }
   }
   
-  public func transform(action: Observable<Action>) -> Observable<Action> {
+  func transform(action: Observable<Action>) -> Observable<Action> {
     action
       .startWith(.getRepos)
   }
@@ -81,24 +53,4 @@ final class RepoListVCReactor: Reactor {
     return newState
   }
   
-  // MARK: - Method
-  
-//  private func search(query: String?, page: Int) -> Observable<(repos: [String], nextPage: Int?)> {
-//    let emptyResult: ([String], Int?) = ([], nil)
-//    guard let url = self.url(for: query, page: page) else { return .just(emptyResult) }
-//    return URLSession.shared.rx.json(url: url)
-//      .map { json -> ([String], Int?) in
-//        guard let dict = json as? [String: Any] else { return emptyResult }
-//        guard let items = dict["items"] as? [[String: Any]] else { return emptyResult }
-//        let repos = items.compactMap { $0["full_name"] as? String }
-//        let nextPage = repos.isEmpty ? nil : page + 1
-//        return (repos, nextPage)
-//      }
-//      .do(onError: { error in
-//        if case let .some(.httpRequestFailed(response, _)) = error as? RxCocoaURLError, response.statusCode == 403 {
-//          print("⚠️ GitHub API rate limit exceeded. Wait for 60 seconds and try again.")
-//        }
-//      })
-//      .catchErrorJustReturn(emptyResult)
-//  }
 }
