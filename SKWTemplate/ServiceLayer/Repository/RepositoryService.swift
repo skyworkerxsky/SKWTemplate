@@ -10,8 +10,6 @@ extension RepositoryService: TargetType {
     return URL(string: "https://api.github.com/search")!
   }
   
-  // https://api.github.com/search/repositories?q=language:swift&sort=stars&order=desc&page=2&per_page=15
-  
   public var path: String {
     switch self {
     case .repositories:
@@ -27,7 +25,8 @@ extension RepositoryService: TargetType {
   }
   
   public var sampleData: Data {
-    return Data()
+    let path = Bundle.main.path(forResource: "samples", ofType: "json")!
+    return FileHandle(forReadingAtPath: path)!.readDataToEndOfFile()
   }
   
   private var parameters: [String: String] {

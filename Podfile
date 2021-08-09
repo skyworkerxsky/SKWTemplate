@@ -7,11 +7,12 @@ target 'SKWTemplate' do
 
   # Pods for SKWTemplate
   pod 'ReactorKit'
-  pod 'RxSwift', '6.2.0'
-  pod 'RxCocoa', '6.2.0'
+  pod 'RxSwift', '~> 5.1.1'
+  pod 'RxCocoa', '~> 5.1.1'
   
   pod 'Alamofire', '5.2.1'
-  pod 'Moya', '14.0.0'
+  pod 'Moya'
+  pod 'Moya/RxSwift'
   
   pod 'YogaKit', '~> 1.7'
 
