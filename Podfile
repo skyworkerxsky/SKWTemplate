@@ -6,13 +6,13 @@ target 'SKWTemplate' do
   use_frameworks!
 
   # Pods for SKWTemplate
-  pod 'ReactorKit'
-  pod 'RxSwift', '~> 5.1.1'
-  pod 'RxCocoa', '~> 5.1.1'
+  pod 'ReactorKit', '~> 2.1.1'
+  pod 'RxSwift', '~> 5.1.0'
+  pod 'RxCocoa', '~> 5.1.0'
   
   pod 'Alamofire', '5.2.1'
-  pod 'Moya'
-  pod 'Moya/RxSwift'
+  pod 'Moya', '14.0.0'
+  pod 'Moya/RxSwift', '14.0.0'
   
   pod 'YogaKit', '~> 1.7'
 

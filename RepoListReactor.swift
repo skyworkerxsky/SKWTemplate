@@ -39,13 +39,14 @@ final class RepoListVCReactor: Reactor {
     case addRepos
   }
   
+  // MARK: - Implementation
+  
   func transform(action: Observable<Action>) -> Observable<Action> {
     action
       .startWith(.getRepos)
   }
   
   func mutate(action: Action) -> Observable<Mutation> {
-    
     switch action {
     case .getRepos:
       return Observable.merge([
@@ -66,16 +67,13 @@ final class RepoListVCReactor: Reactor {
     return newState
   }
   
- // MARK: - Methods
+  // MARK: - Methods
   
   private func search() -> Observable<[Repo]> {
     provider.rx
       .request(.repositories)
       .map(RepoResponse.self, failsOnEmptyData: false)
-      .map {
-        print("items: \($0.items)")
-        return $0.items
-      }
+      .map { $0.items }
       .asObservable()
   }
 }
