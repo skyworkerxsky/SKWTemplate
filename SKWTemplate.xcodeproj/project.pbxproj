@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4912EDC026C0E56900E9121E /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912EDBF26C0E56900E9121E /* RepositoryService.swift */; };
+		4912EDC026C0E56900E9121E /* RepositoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912EDBF26C0E56900E9121E /* RepositoryRequest.swift */; };
 		4912EDC226C0E7F600E9121E /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912EDC126C0E7F600E9121E /* Repo.swift */; };
 		4912EDC826C1093F00E9121E /* RepoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912EDC726C1093F00E9121E /* RepoResponse.swift */; };
 		4954724626BD07500025B227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954724526BD07500025B227 /* AppDelegate.swift */; };
@@ -17,13 +17,14 @@
 		4954725226BD07520025B227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4954725026BD07520025B227 /* LaunchScreen.storyboard */; };
 		4954725F26BD0A0F0025B227 /* RepoListReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954725E26BD0A0F0025B227 /* RepoListReactor.swift */; };
 		4954726126BD0B500025B227 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4954726026BD0B500025B227 /* Main.storyboard */; };
+		4982A1C726C2515D0051C3FD /* AppPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982A1C626C2515D0051C3FD /* AppPart.swift */; };
+		4982A1C926C275090051C3FD /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982A1C826C275090051C3FD /* RepositoryService.swift */; };
 		49F4D18E26BD5D8B00F26C0C /* RepoListVC+Bind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4D18D26BD5D8B00F26C0C /* RepoListVC+Bind.swift */; };
-		CB7656A9DA307452A1F872E9 /* Pods_SKWTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3669A2375E5F5539848CCE9E /* Pods_SKWTemplate.framework */; };
+		6B447CC4E48F0F1162CDE138 /* Pods_SKWTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0AED4DB153E50F74DD86AD7 /* Pods_SKWTemplate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3669A2375E5F5539848CCE9E /* Pods_SKWTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKWTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4912EDBF26C0E56900E9121E /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
+		4912EDBF26C0E56900E9121E /* RepositoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRequest.swift; sourceTree = "<group>"; };
 		4912EDC126C0E7F600E9121E /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		4912EDC726C1093F00E9121E /* RepoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoResponse.swift; sourceTree = "<group>"; };
 		4954724226BD07500025B227 /* SKWTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKWTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,9 +36,12 @@
 		4954725326BD07520025B227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4954725E26BD0A0F0025B227 /* RepoListReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListReactor.swift; sourceTree = SOURCE_ROOT; };
 		4954726026BD0B500025B227 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4982A1C626C2515D0051C3FD /* AppPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPart.swift; sourceTree = "<group>"; };
+		4982A1C826C275090051C3FD /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
 		49F4D18D26BD5D8B00F26C0C /* RepoListVC+Bind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoListVC+Bind.swift"; sourceTree = "<group>"; };
-		5D4E5830A651C38FBB1828A7 /* Pods-SKWTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKWTemplate.release.xcconfig"; path = "Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate.release.xcconfig"; sourceTree = "<group>"; };
-		C17109711976D5C11FD7DE16 /* Pods-SKWTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKWTemplate.debug.xcconfig"; path = "Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate.debug.xcconfig"; sourceTree = "<group>"; };
+		667E7F3348B8E50488A215EC /* Pods-SKWTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKWTemplate.debug.xcconfig"; path = "Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate.debug.xcconfig"; sourceTree = "<group>"; };
+		A238F4AF42EE4CB8AE7608FD /* Pods-SKWTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKWTemplate.release.xcconfig"; path = "Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate.release.xcconfig"; sourceTree = "<group>"; };
+		E0AED4DB153E50F74DD86AD7 /* Pods_SKWTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKWTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB7656A9DA307452A1F872E9 /* Pods_SKWTemplate.framework in Frameworks */,
+				6B447CC4E48F0F1162CDE138 /* Pods_SKWTemplate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,8 +59,8 @@
 		104544A65BA067C85A400DDD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C17109711976D5C11FD7DE16 /* Pods-SKWTemplate.debug.xcconfig */,
-				5D4E5830A651C38FBB1828A7 /* Pods-SKWTemplate.release.xcconfig */,
+				667E7F3348B8E50488A215EC /* Pods-SKWTemplate.debug.xcconfig */,
+				A238F4AF42EE4CB8AE7608FD /* Pods-SKWTemplate.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -65,7 +69,8 @@
 			isa = PBXGroup;
 			children = (
 				4912EDC626C1091E00E9121E /* Model */,
-				4912EDBF26C0E56900E9121E /* RepositoryService.swift */,
+				4912EDBF26C0E56900E9121E /* RepositoryRequest.swift */,
+				4982A1C826C275090051C3FD /* RepositoryService.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -109,7 +114,7 @@
 				4954724426BD07500025B227 /* SKWTemplate */,
 				4954724326BD07500025B227 /* Products */,
 				104544A65BA067C85A400DDD /* Pods */,
-				697DA2BF01D8007BC5DEA686 /* Frameworks */,
+				590AA9837355CE3B1088051C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,8 +140,8 @@
 		4954725926BD07610025B227 /* SKWApp */ = {
 			isa = PBXGroup;
 			children = (
-				4954724526BD07500025B227 /* AppDelegate.swift */,
-				4954724726BD07500025B227 /* SceneDelegate.swift */,
+				4982A1C426C251390051C3FD /* AppDelegate */,
+				4982A1C526C251470051C3FD /* Dependency */,
 			);
 			path = SKWApp;
 			sourceTree = "<group>";
@@ -170,10 +175,27 @@
 			path = RepoList;
 			sourceTree = "<group>";
 		};
-		697DA2BF01D8007BC5DEA686 /* Frameworks */ = {
+		4982A1C426C251390051C3FD /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				3669A2375E5F5539848CCE9E /* Pods_SKWTemplate.framework */,
+				4954724526BD07500025B227 /* AppDelegate.swift */,
+				4954724726BD07500025B227 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		4982A1C526C251470051C3FD /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				4982A1C626C2515D0051C3FD /* AppPart.swift */,
+			);
+			path = Dependency;
+			sourceTree = "<group>";
+		};
+		590AA9837355CE3B1088051C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0AED4DB153E50F74DD86AD7 /* Pods_SKWTemplate.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -185,11 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4954725626BD07520025B227 /* Build configuration list for PBXNativeTarget "SKWTemplate" */;
 			buildPhases = (
-				B90E52E55D338D71CB7497B5 /* [CP] Check Pods Manifest.lock */,
+				A74C6983C4947CFA1CFBA5E4 /* [CP] Check Pods Manifest.lock */,
 				4954723E26BD07500025B227 /* Sources */,
 				4954723F26BD07500025B227 /* Frameworks */,
 				4954724026BD07500025B227 /* Resources */,
-				7D9B074971410395639B16EE /* [CP] Embed Pods Frameworks */,
+				22CC8093C4A7EE4BD255AC4D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,7 +268,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7D9B074971410395639B16EE /* [CP] Embed Pods Frameworks */ = {
+		22CC8093C4A7EE4BD255AC4D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -263,7 +285,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B90E52E55D338D71CB7497B5 /* [CP] Check Pods Manifest.lock */ = {
+		A74C6983C4947CFA1CFBA5E4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -292,10 +314,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4912EDC026C0E56900E9121E /* RepositoryService.swift in Sources */,
+				4912EDC026C0E56900E9121E /* RepositoryRequest.swift in Sources */,
+				4982A1C926C275090051C3FD /* RepositoryService.swift in Sources */,
 				4912EDC226C0E7F600E9121E /* Repo.swift in Sources */,
 				4912EDC826C1093F00E9121E /* RepoResponse.swift in Sources */,
 				4954724A26BD07500025B227 /* RepoListVC.swift in Sources */,
+				4982A1C726C2515D0051C3FD /* AppPart.swift in Sources */,
 				4954724626BD07500025B227 /* AppDelegate.swift in Sources */,
 				49F4D18E26BD5D8B00F26C0C /* RepoListVC+Bind.swift in Sources */,
 				4954725F26BD0A0F0025B227 /* RepoListReactor.swift in Sources */,
@@ -435,7 +459,7 @@
 		};
 		4954725726BD07520025B227 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C17109711976D5C11FD7DE16 /* Pods-SKWTemplate.debug.xcconfig */;
+			baseConfigurationReference = 667E7F3348B8E50488A215EC /* Pods-SKWTemplate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -455,7 +479,7 @@
 		};
 		4954725826BD07520025B227 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D4E5830A651C38FBB1828A7 /* Pods-SKWTemplate.release.xcconfig */;
+			baseConfigurationReference = A238F4AF42EE4CB8AE7608FD /* Pods-SKWTemplate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

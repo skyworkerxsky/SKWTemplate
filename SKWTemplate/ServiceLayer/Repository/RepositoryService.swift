@@ -1,50 +1,47 @@
+//
+//  RepositoryService.swift
+//  SKWTemplate
+//
+//  Created by Алексей Макаров on 10.08.2021.
+//
+
 import Foundation
+import RxSwift
 import Moya
+import DITranquillity
 
-public enum RepositoryService {
-  case repositories
+class RepoServicePart: DIPart {
+  static func load(container: DIContainer) {
+    container.register(RepositoryServiceImplementation.init)
+      .as(RepositoryService.self)
+      .injection(cycle: true, { $0.provider = $1 })
+      .lifetime(.single)
+    
+    container
+      .register { MoyaProvider<RepositoryRequest>() }
+      .lifetime(.objectGraph)
+  }
 }
 
-extension RepositoryService: TargetType {
-  public var baseURL: URL {
-    return URL(string: "https://api.github.com/search")!
+protocol RepositoryService {
+  func fetchRepositories() -> Observable<[Repo]>
+}
+
+final class RepositoryServiceImplementation: RepositoryService {
+  
+  var provider: MoyaProvider<RepositoryRequest>
+  
+  init(provider: MoyaProvider<RepositoryRequest>) {
+    self.provider = provider
   }
   
-  public var path: String {
-    switch self {
-    case .repositories:
-      return "/repositories"
-    }
-  }
-  
-  public var method: Moya.Method {
-    switch self {
-    case .repositories:
-      return .get
-    }
-  }
-  
-  public var sampleData: Data {
-    let path = Bundle.main.path(forResource: "samples", ofType: "json")!
-    return FileHandle(forReadingAtPath: path)!.readDataToEndOfFile()
-  }
-  
-  private var parameters: [String: String] {
-    return ["q": "language:swift",
-            "sort": "stars",
-            "order": "desc",
-            "page": "1",
-            "per_page": "15"]
-  }
-  
-  public var task: Task {
-    switch self {
-    case .repositories:
-      return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
-    }
-  }
-  
-  public var headers: [String: String]? {
-    return ["Content-Type": "application/json"]
+  func fetchRepositories() -> Observable<[Repo]> {
+    provider
+      .rx
+      .request(.repositories)
+      .map(RepoResponse.self, failsOnEmptyData: false)
+      .map { $0.items }
+      .asObservable()
   }
 }
+

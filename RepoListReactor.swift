@@ -2,13 +2,22 @@ import ReactorKit
 import RxCocoa
 import RxSwift
 import Moya
+import DITranquillity
+
+final class RepoListPart: DIPart {
+  static func load(container: DIContainer) {
+    container.register(RepoListVCReactor.init)
+      .as(RepoListVCReactor.self)
+      .lifetime(.objectGraph)
+  }
+}
 
 final class RepoListVCReactor: Reactor {
   
   // MARK: - Private
   
   private let bag = DisposeBag()
-  private let provider = MoyaProvider<RepositoryService>()
+  var provider: RepositoryServiceImplementation
   
   // MARK: - Initial
   
@@ -16,8 +25,10 @@ final class RepoListVCReactor: Reactor {
   
   // MARK: - Init
   
-  public init() {
+  public init(provider: RepositoryServiceImplementation) {
     initialState = State()
+    
+    self.provider = provider
   }
   
   // MARK: - State
@@ -50,7 +61,7 @@ final class RepoListVCReactor: Reactor {
     switch action {
     case .getRepos:
       return Observable.merge([
-        self.search().map { .setRepos($0) }
+        self.provider.fetchRepositories().map { .setRepos($0)}
       ])
     }
   }
@@ -69,11 +80,11 @@ final class RepoListVCReactor: Reactor {
   
   // MARK: - Methods
   
-  private func search() -> Observable<[Repo]> {
-    provider.rx
-      .request(.repositories)
-      .map(RepoResponse.self, failsOnEmptyData: false)
-      .map { $0.items }
-      .asObservable()
-  }
+//  private func getRepositories() -> Observable<[Repo]> {
+//    provider.rx
+//      .request(.repositories)
+//      .map(RepoResponse.self, failsOnEmptyData: false)
+//      .map { $0.items }
+//      .asObservable()
+//  }
 }
