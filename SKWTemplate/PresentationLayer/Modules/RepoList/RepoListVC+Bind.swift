@@ -4,9 +4,9 @@ import RxSwift
 
 extension RepoListVC: View {
   public func bind(reactor: RepoListVCReactor) {
-    let state = reactor.state.distinctUntilChanged().share(replay: 1)
+    // let state = reactor.state.distinctUntilChanged().share(replay: 1)
     
-    reactor.state.map(\.test)
+    reactor.state.map(\.repositories)
       .bind(to: tableView.rx.items(cellIdentifier: "cell")) { indexPath, repo, cell in
         cell.textLabel?.text = repo.name
       }

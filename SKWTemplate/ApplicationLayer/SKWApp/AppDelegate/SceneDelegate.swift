@@ -18,9 +18,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let windowScene = (scene as? UIWindowScene) else { return }
     
     let window = UIWindow(windowScene: windowScene)
+    
+    let reactor: RepoListVCReactor = ContainerDI.container.resolve()
     let viewController = RepoListVC()
-    viewController.reactor = RepoListVCReactor()
+    viewController.reactor = reactor
+    
     let navigation = UINavigationController(rootViewController: viewController)
+    
     window.rootViewController = navigation
     
     self.window = window

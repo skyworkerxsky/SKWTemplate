@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49108E4C26CA627800CDD833 /* ContainerDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49108E4B26CA627800CDD833 /* ContainerDI.swift */; };
 		4912EDC026C0E56900E9121E /* RepositoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912EDBF26C0E56900E9121E /* RepositoryRequest.swift */; };
 		4912EDC226C0E7F600E9121E /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912EDC126C0E7F600E9121E /* Repo.swift */; };
 		4912EDC826C1093F00E9121E /* RepoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912EDC726C1093F00E9121E /* RepoResponse.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49108E4B26CA627800CDD833 /* ContainerDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerDI.swift; sourceTree = "<group>"; };
 		4912EDBF26C0E56900E9121E /* RepositoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRequest.swift; sourceTree = "<group>"; };
 		4912EDC126C0E7F600E9121E /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		4912EDC726C1093F00E9121E /* RepoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoResponse.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				4954724526BD07500025B227 /* AppDelegate.swift */,
 				4954724726BD07500025B227 /* SceneDelegate.swift */,
+				49108E4B26CA627800CDD833 /* ContainerDI.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				4912EDC026C0E56900E9121E /* RepositoryRequest.swift in Sources */,
 				4982A1C926C275090051C3FD /* RepositoryService.swift in Sources */,
 				4912EDC226C0E7F600E9121E /* Repo.swift in Sources */,
+				49108E4C26CA627800CDD833 /* ContainerDI.swift in Sources */,
 				4912EDC826C1093F00E9121E /* RepoResponse.swift in Sources */,
 				4954724A26BD07500025B227 /* RepoListVC.swift in Sources */,
 				4982A1C726C2515D0051C3FD /* AppPart.swift in Sources */,

@@ -13,12 +13,13 @@ public class AppPart: DIFramework {
   public static func load(container: DIContainer) {
     // registrations will be placed here
     container.append(part: ServicesPart.self)
+    container.append(part: ReactorPart.self)
   }
 }
 
 private class ServicesPart: DIPart {
   static let parts: [DIPart.Type] = [
-    RepoServicePart.self
+    RepoServicePart.self,
   ]
   
   static func load(container: DIContainer) {
@@ -28,9 +29,9 @@ private class ServicesPart: DIPart {
   }
 }
 
-private class PresentersPart: DIPart {
+private class ReactorPart: DIPart {
   static let parts: [DIPart.Type] = [
-    RepoListPart.self,
+    ReactorListPart.self,
   ]
   
   static func load(container: DIContainer) {

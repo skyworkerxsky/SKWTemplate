@@ -1,10 +1,9 @@
 import ReactorKit
 import RxCocoa
 import RxSwift
-import Moya
 import DITranquillity
 
-final class RepoListPart: DIPart {
+final class ReactorListPart: DIPart {
   static func load(container: DIContainer) {
     container.register(RepoListVCReactor.init)
       .as(RepoListVCReactor.self)
@@ -16,8 +15,7 @@ final class RepoListVCReactor: Reactor {
   
   // MARK: - Private
   
-  private let bag = DisposeBag()
-  var provider: RepositoryServiceImplementation
+  let repoService: RepositoryService
   
   // MARK: - Initial
   
@@ -25,16 +23,16 @@ final class RepoListVCReactor: Reactor {
   
   // MARK: - Init
   
-  public init(provider: RepositoryServiceImplementation) {
+  init(repoService: RepositoryService) {
     initialState = State()
     
-    self.provider = provider
+    self.repoService = repoService
   }
   
   // MARK: - State
   
   struct State: Equatable {
-    var test: [Repo] = []
+    var repositories: [Repo] = []
   }
   
   // MARK: - Action
@@ -47,7 +45,6 @@ final class RepoListVCReactor: Reactor {
   
   public enum Mutation: Equatable {
     case setRepos([Repo] = [])
-    case addRepos
   }
   
   // MARK: - Implementation
@@ -61,7 +58,7 @@ final class RepoListVCReactor: Reactor {
     switch action {
     case .getRepos:
       return Observable.merge([
-        self.provider.fetchRepositories().map { .setRepos($0)}
+        self.repoService.fetchRepositories().map { .setRepos($0)}
       ])
     }
   }
@@ -71,20 +68,9 @@ final class RepoListVCReactor: Reactor {
     
     switch mutation {
     case let .setRepos(data):
-      newState.test = data
-    case .addRepos: break
+      newState.repositories = data
     }
     
     return newState
   }
-  
-  // MARK: - Methods
-  
-//  private func getRepositories() -> Observable<[Repo]> {
-//    provider.rx
-//      .request(.repositories)
-//      .map(RepoResponse.self, failsOnEmptyData: false)
-//      .map { $0.items }
-//      .asObservable()
-//  }
 }
