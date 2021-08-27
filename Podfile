@@ -17,4 +17,6 @@ target 'SKWTemplate' do
   pod 'YogaKit', '~> 1.7'
   pod 'DITranquillity', '3.7.1'
 
+  pod 'YandexMobileMetrica', '3.17.0'
+
 end

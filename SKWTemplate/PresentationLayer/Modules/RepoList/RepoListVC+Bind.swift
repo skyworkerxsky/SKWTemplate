@@ -1,6 +1,7 @@
 import ReactorKit
 import RxCocoa
 import RxSwift
+import YandexMobileMetrica
 
 extension RepoListVC: View {
   public func bind(reactor: RepoListVCReactor) {
@@ -14,7 +15,12 @@ extension RepoListVC: View {
     
     tableView.rx.itemSelected
       .subscribe(onNext: { _ in
-        print("tap action")
+        print("TAP")
+        let params : [String : Any] = ["key1": "value1", "key2": "value2"]
+        YMMYandexMetrica.reportEvent("EVENT", parameters: params, onFailure: { error in
+          print("DID FAIL REPORT EVENT: %@")
+          print("REPORT ERROR: %@", error.localizedDescription)
+        })
       })
       .disposed(by: disposeBag)
     
