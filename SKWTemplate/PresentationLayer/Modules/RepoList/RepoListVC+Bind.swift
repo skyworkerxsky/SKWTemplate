@@ -14,7 +14,7 @@ extension RepoListVC: View {
     
     tableView.rx.itemSelected
       .subscribe(onNext: { _ in
-        print("tap action")
+        
       })
       .disposed(by: disposeBag)
     
