@@ -3,7 +3,7 @@ import RxSwift
 import Moya
 
 extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
-  func filterSuccess(secondTry: Bool = false) -> Single<Response> {
+  func filterSuccess() -> Single<Response> {
     return flatMap { response -> Single<Response> in
       if 200 ... 299 ~= response.statusCode {
         return .just(response)
