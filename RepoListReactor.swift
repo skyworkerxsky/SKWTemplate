@@ -34,6 +34,7 @@ final class RepoListVCReactor: Reactor {
   struct State: Equatable {
     var repositories: [Repo] = []
     var isLoading: Bool = false
+    var isError: Bool = false
   }
   
   // MARK: - Action
@@ -47,6 +48,7 @@ final class RepoListVCReactor: Reactor {
   public enum Mutation: Equatable {
     case setRepos([Repo] = [])
     case setLoading(Bool)
+    case setError(Bool)
   }
   
   // MARK: - Implementation
@@ -59,10 +61,12 @@ final class RepoListVCReactor: Reactor {
   func mutate(action: Action) -> Observable<Mutation> {
     switch action {
     case .getRepos:
-      return Observable.merge([
-        .just(.setLoading(true)),
-        repoService.fetchRepositories().map { .setRepos($0)}
-      ])
+      let setLoading: Observable<Mutation> = .just(.setLoading(true))
+      let setrepos: Observable<Mutation> = repoService.fetchRepositories()
+        .map { .setRepos($0) }
+        .catchErrorJustReturn(.setError(true))
+      
+      return setLoading.concat(setrepos)
     }
   }
   
@@ -75,6 +79,8 @@ final class RepoListVCReactor: Reactor {
       newState.isLoading = false
     case let .setLoading(condition):
       newState.isLoading = condition
+    case let .setError(error):
+      newState.isError = error
     }
     
     return newState

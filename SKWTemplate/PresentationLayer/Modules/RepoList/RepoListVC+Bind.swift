@@ -25,5 +25,13 @@ extension RepoListVC: View {
         tableView.isHidden = false
       }
       .disposed(by: disposeBag)
+    
+    // error handling
+    state.map(\.isError)
+      .filter { $0 }
+      .bind {
+        print("isError - ", $0)
+      }
+      .disposed(by: disposeBag)
   }
 }
