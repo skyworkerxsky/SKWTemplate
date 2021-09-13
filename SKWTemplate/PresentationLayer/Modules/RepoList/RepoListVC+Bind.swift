@@ -4,9 +4,9 @@ import RxSwift
 
 extension RepoListVC: View {
   public func bind(reactor: RepoListVCReactor) {
-    // let state = reactor.state.distinctUntilChanged().share(replay: 1)
+    let state = reactor.state.distinctUntilChanged().share(replay: 1)
     
-    reactor.state.map(\.repositories)
+    state.map(\.repositories)
       .bind(to: tableView.rx.items(cellIdentifier: "cell")) { indexPath, repo, cell in
         cell.textLabel?.text = repo.name
       }
@@ -18,5 +18,12 @@ extension RepoListVC: View {
       })
       .disposed(by: disposeBag)
     
+    state.map(\.isLoading)
+      .filter { $0 == false }
+      .bind { [self] _ in
+        activityIndicator.stopAnimating()
+        tableView.isHidden = false
+      }
+      .disposed(by: disposeBag)
   }
 }

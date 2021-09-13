@@ -33,6 +33,7 @@ final class RepoListVCReactor: Reactor {
   
   struct State: Equatable {
     var repositories: [Repo] = []
+    var isLoading: Bool = false
   }
   
   // MARK: - Action
@@ -45,6 +46,7 @@ final class RepoListVCReactor: Reactor {
   
   public enum Mutation: Equatable {
     case setRepos([Repo] = [])
+    case setLoading(Bool)
   }
   
   // MARK: - Implementation
@@ -58,7 +60,8 @@ final class RepoListVCReactor: Reactor {
     switch action {
     case .getRepos:
       return Observable.merge([
-        self.repoService.fetchRepositories().map { .setRepos($0)}
+        .just(.setLoading(true)),
+        repoService.fetchRepositories().map { .setRepos($0)}
       ])
     }
   }
@@ -69,6 +72,9 @@ final class RepoListVCReactor: Reactor {
     switch mutation {
     case let .setRepos(data):
       newState.repositories = data
+      newState.isLoading = false
+    case let .setLoading(condition):
+      newState.isLoading = condition
     }
     
     return newState

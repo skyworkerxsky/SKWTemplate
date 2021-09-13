@@ -6,9 +6,17 @@ class RepoListVC: UIViewController {
   
   var disposeBag = DisposeBag()
   
+  private(set) lazy var activityIndicator: UIActivityIndicatorView = {
+    let activityIndicator: UIActivityIndicatorView = .init()
+    activityIndicator.startAnimating()
+    activityIndicator.hidesWhenStopped = true
+    return activityIndicator
+  }()
+  
   private(set) lazy var tableView: UITableView = {
     let tableView: UITableView = .init()
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    tableView.isHidden = true
     return tableView
   }()
   
@@ -21,7 +29,8 @@ class RepoListVC: UIViewController {
   }
   
   private func createUI() {
-    view.addSubview(tableView)
+    [tableView,
+     activityIndicator].forEach { view.addSubview($0) }
   }
   
   private func configureUI() {
@@ -30,6 +39,7 @@ class RepoListVC: UIViewController {
   
   private func configureLayout() {
     tableView.pin.top().left().right().bottom()
+    activityIndicator.pin.center()
   }
 
 }
