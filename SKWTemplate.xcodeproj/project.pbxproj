@@ -16,10 +16,10 @@
 		4954724A26BD07500025B227 /* RepoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954724926BD07500025B227 /* RepoListVC.swift */; };
 		4954724F26BD07520025B227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4954724E26BD07520025B227 /* Assets.xcassets */; };
 		4954725226BD07520025B227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4954725026BD07520025B227 /* LaunchScreen.storyboard */; };
-		4954725F26BD0A0F0025B227 /* RepoListReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954725E26BD0A0F0025B227 /* RepoListReactor.swift */; };
 		4954726126BD0B500025B227 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4954726026BD0B500025B227 /* Main.storyboard */; };
 		4982A1C726C2515D0051C3FD /* AppPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982A1C626C2515D0051C3FD /* AppPart.swift */; };
 		4982A1C926C275090051C3FD /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982A1C826C275090051C3FD /* RepositoryService.swift */; };
+		49B9425D26EF3DDA003C3BC5 /* RepoListReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9425C26EF3DDA003C3BC5 /* RepoListReactor.swift */; };
 		49CAA1A426EF1B90008D58F2 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 49CAA1A326EF1B90008D58F2 /* Moya */; };
 		49CAA1A626EF1B90008D58F2 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 49CAA1A526EF1B90008D58F2 /* RxMoya */; };
 		49CAA1A926EF1BC5008D58F2 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 49CAA1A826EF1BC5008D58F2 /* RxSwift */; };
@@ -42,10 +42,10 @@
 		4954724E26BD07520025B227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4954725126BD07520025B227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4954725326BD07520025B227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4954725E26BD0A0F0025B227 /* RepoListReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListReactor.swift; sourceTree = SOURCE_ROOT; };
 		4954726026BD0B500025B227 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4982A1C626C2515D0051C3FD /* AppPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPart.swift; sourceTree = "<group>"; };
 		4982A1C826C275090051C3FD /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
+		49B9425C26EF3DDA003C3BC5 /* RepoListReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListReactor.swift; sourceTree = "<group>"; };
 		49F4D18D26BD5D8B00F26C0C /* RepoListVC+Bind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoListVC+Bind.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,8 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				4954724926BD07500025B227 /* RepoListVC.swift */,
-				4954725E26BD0A0F0025B227 /* RepoListReactor.swift */,
 				49F4D18D26BD5D8B00F26C0C /* RepoListVC+Bind.swift */,
+				49B9425C26EF3DDA003C3BC5 /* RepoListReactor.swift */,
 			);
 			path = RepoList;
 			sourceTree = "<group>";
@@ -283,12 +283,12 @@
 				4982A1C926C275090051C3FD /* RepositoryService.swift in Sources */,
 				4912EDC226C0E7F600E9121E /* Repo.swift in Sources */,
 				49108E4C26CA627800CDD833 /* ContainerDI.swift in Sources */,
+				49B9425D26EF3DDA003C3BC5 /* RepoListReactor.swift in Sources */,
 				4912EDC826C1093F00E9121E /* RepoResponse.swift in Sources */,
 				4954724A26BD07500025B227 /* RepoListVC.swift in Sources */,
 				4982A1C726C2515D0051C3FD /* AppPart.swift in Sources */,
 				4954724626BD07500025B227 /* AppDelegate.swift in Sources */,
 				49F4D18E26BD5D8B00F26C0C /* RepoListVC+Bind.swift in Sources */,
-				4954725F26BD0A0F0025B227 /* RepoListReactor.swift in Sources */,
 				4954724826BD07500025B227 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
