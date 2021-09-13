@@ -62,11 +62,11 @@ final class RepoListVCReactor: Reactor {
     switch action {
     case .getRepos:
       let setLoading: Observable<Mutation> = .just(.setLoading(true))
-      let setrepos: Observable<Mutation> = repoService.fetchRepositories()
+      let setRepos: Observable<Mutation> = repoService.fetchRepositories()
         .map { .setRepos($0) }
         .catchErrorJustReturn(.setError(true))
       
-      return setLoading.concat(setrepos)
+      return setLoading.concat(setRepos)
     }
   }
   
