@@ -64,7 +64,10 @@ final class RepoListVCReactor: Reactor {
       let setLoading: Observable<Mutation> = .just(.setLoading(true))
       let setRepos: Observable<Mutation> = repoService.fetchRepositories()
         .map { .setRepos($0) }
-        .catchErrorJustReturn(.setError(true))
+        .catchError({ err in
+          print("error - ", err.localizedDescription)
+          return Observable.merge(.just(.setError(true)))
+        })
       
       return setLoading.concat(setRepos)
     }

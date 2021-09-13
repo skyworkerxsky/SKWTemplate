@@ -11,6 +11,9 @@
 		4912EDC026C0E56900E9121E /* RepositoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912EDBF26C0E56900E9121E /* RepositoryRequest.swift */; };
 		4912EDC226C0E7F600E9121E /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912EDC126C0E7F600E9121E /* Repo.swift */; };
 		4912EDC826C1093F00E9121E /* RepoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912EDC726C1093F00E9121E /* RepoResponse.swift */; };
+		493679BA26EF6EFD00EC62B9 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493679B926EF6EFD00EC62B9 /* AppError.swift */; };
+		493679BD26EF700A00EC62B9 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493679BC26EF700A00EC62B9 /* ErrorHandling.swift */; };
+		493C555926EF627A00AB6765 /* ErrorRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493C555826EF627A00AB6765 /* ErrorRepos.swift */; };
 		4954724626BD07500025B227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954724526BD07500025B227 /* AppDelegate.swift */; };
 		4954724826BD07500025B227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954724726BD07500025B227 /* SceneDelegate.swift */; };
 		4954724A26BD07500025B227 /* RepoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954724926BD07500025B227 /* RepoListVC.swift */; };
@@ -35,6 +38,9 @@
 		4912EDBF26C0E56900E9121E /* RepositoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRequest.swift; sourceTree = "<group>"; };
 		4912EDC126C0E7F600E9121E /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		4912EDC726C1093F00E9121E /* RepoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoResponse.swift; sourceTree = "<group>"; };
+		493679B926EF6EFD00EC62B9 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		493679BC26EF700A00EC62B9 /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
+		493C555826EF627A00AB6765 /* ErrorRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorRepos.swift; sourceTree = "<group>"; };
 		4954724226BD07500025B227 /* SKWTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKWTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4954724526BD07500025B227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4954724726BD07500025B227 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +86,7 @@
 		4912EDC326C1027400E9121E /* ServiceLayer */ = {
 			isa = PBXGroup;
 			children = (
+				493679BB26EF6FF700EC62B9 /* Extension */,
 				4912EDBC26C0E47C00E9121E /* Repository */,
 			);
 			path = ServiceLayer;
@@ -110,6 +117,31 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		493679B726EF6ECE00EC62B9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				493679B826EF6EDF00EC62B9 /* Error */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		493679B826EF6EDF00EC62B9 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				493C555826EF627A00AB6765 /* ErrorRepos.swift */,
+				493679B926EF6EFD00EC62B9 /* AppError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		493679BB26EF6FF700EC62B9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				493679BC26EF700A00EC62B9 /* ErrorHandling.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		4954723926BD07500025B227 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				4912EDC426C107E500E9121E /* ApplicationLayer */,
+				493679B726EF6ECE00EC62B9 /* Common */,
 				4912EDC526C1083300E9121E /* PresentationLayer */,
 				4912EDC326C1027400E9121E /* ServiceLayer */,
 				4954725B26BD07850025B227 /* Resources */,
@@ -281,13 +314,16 @@
 			files = (
 				4912EDC026C0E56900E9121E /* RepositoryRequest.swift in Sources */,
 				4982A1C926C275090051C3FD /* RepositoryService.swift in Sources */,
+				493679BA26EF6EFD00EC62B9 /* AppError.swift in Sources */,
 				4912EDC226C0E7F600E9121E /* Repo.swift in Sources */,
 				49108E4C26CA627800CDD833 /* ContainerDI.swift in Sources */,
+				493C555926EF627A00AB6765 /* ErrorRepos.swift in Sources */,
 				49B9425D26EF3DDA003C3BC5 /* RepoListReactor.swift in Sources */,
 				4912EDC826C1093F00E9121E /* RepoResponse.swift in Sources */,
 				4954724A26BD07500025B227 /* RepoListVC.swift in Sources */,
 				4982A1C726C2515D0051C3FD /* AppPart.swift in Sources */,
 				4954724626BD07500025B227 /* AppDelegate.swift in Sources */,
+				493679BD26EF700A00EC62B9 /* ErrorHandling.swift in Sources */,
 				49F4D18E26BD5D8B00F26C0C /* RepoListVC+Bind.swift in Sources */,
 				4954724826BD07500025B227 /* SceneDelegate.swift in Sources */,
 			);

@@ -40,6 +40,7 @@ final class RepositoryServiceImplementation: RepositoryService {
     provider
       .rx
       .request(.repositories)
+      .filterSuccess()
       .map(RepoResponse.self, failsOnEmptyData: false)
       .map { $0.items }
       .asObservable()
