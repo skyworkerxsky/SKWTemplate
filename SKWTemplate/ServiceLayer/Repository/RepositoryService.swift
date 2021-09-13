@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import Moya
+import RxMoya
 import DITranquillity
 
 class RepoServicePart: DIPart {
@@ -42,5 +43,5 @@ final class RepositoryServiceImplementation: RepositoryService {
       .map(RepoResponse.self, failsOnEmptyData: false)
       .map { $0.items }
       .asObservable()
-  }
+  } 
 }

@@ -13,10 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
     ContainerDI.container.append(framework: AppPart.self)
-
-    if !ContainerDI.container.validate() {
-      fatalError()
-    }
     
     return true
   }

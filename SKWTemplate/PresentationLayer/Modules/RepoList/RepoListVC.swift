@@ -1,40 +1,35 @@
 import UIKit
 import RxSwift
-import YogaKit
+import PinLayout
 
 class RepoListVC: UIViewController {
   
   var disposeBag = DisposeBag()
   
-  private(set) lazy var testBtn: UIButton = .init()
-  private(set) lazy var tableView: UITableView = .init()
+  private(set) lazy var tableView: UITableView = {
+    let tableView: UITableView = .init()
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    return tableView
+  }()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    view.backgroundColor = .white
-    
-    view.addSubview(tableView)
-    
-    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    createUI()
+    configureUI()
+    configureLayout()
   }
   
-  override func viewDidLayoutSubviews() {
-    super.viewDidLayoutSubviews()
-    
-    view.configureLayout { layout in
-      layout.isEnabled = true
-      layout.width = 100%
-      layout.height = 100%
-    }
-    
-    tableView.configureLayout { layout in
-      layout.isEnabled = true
-      layout.width = 100%
-      layout.height = 100%
-    }
-    
-    view.yoga.applyLayout(preservingOrigin: true)
+  private func createUI() {
+    view.addSubview(tableView)
+  }
+  
+  private func configureUI() {
+    view.backgroundColor = .white
+  }
+  
+  private func configureLayout() {
+    tableView.pin.top().left().right().bottom()
   }
 
 }
