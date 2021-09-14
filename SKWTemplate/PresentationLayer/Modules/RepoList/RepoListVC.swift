@@ -2,7 +2,9 @@ import UIKit
 import RxSwift
 import PinLayout
 
-class RepoListVC: UIViewController {
+class RepoListVC: UIViewController, Coordinating  {
+  
+  var coordinator: Coordinator?
   
   var disposeBag = DisposeBag()
   

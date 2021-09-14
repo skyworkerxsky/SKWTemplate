@@ -13,8 +13,8 @@ extension RepoListVC: View {
       .disposed(by: disposeBag)
     
     tableView.rx.itemSelected
-      .subscribe(onNext: { _ in
-        
+      .subscribe(onNext: { [self] _ in
+        self.coordinator?.eventOccured(with: .openDetail)
       })
       .disposed(by: disposeBag)
     

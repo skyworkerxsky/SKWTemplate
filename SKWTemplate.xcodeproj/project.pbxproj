@@ -20,6 +20,9 @@
 		4954724F26BD07520025B227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4954724E26BD07520025B227 /* Assets.xcassets */; };
 		4954725226BD07520025B227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4954725026BD07520025B227 /* LaunchScreen.storyboard */; };
 		4954726126BD0B500025B227 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4954726026BD0B500025B227 /* Main.storyboard */; };
+		49824DFB26F09DF90051C7BF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49824DFA26F09DF90051C7BF /* Coordinator.swift */; };
+		49824DFD26F09F3C0051C7BF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49824DFC26F09F3C0051C7BF /* MainCoordinator.swift */; };
+		49824E0126F0A7490051C7BF /* RepoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49824E0026F0A7490051C7BF /* RepoDetail.swift */; };
 		4982A1C726C2515D0051C3FD /* AppPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982A1C626C2515D0051C3FD /* AppPart.swift */; };
 		4982A1C926C275090051C3FD /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982A1C826C275090051C3FD /* RepositoryService.swift */; };
 		49B9425D26EF3DDA003C3BC5 /* RepoListReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9425C26EF3DDA003C3BC5 /* RepoListReactor.swift */; };
@@ -50,6 +53,9 @@
 		4954725126BD07520025B227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4954725326BD07520025B227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4954726026BD0B500025B227 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		49824DFA26F09DF90051C7BF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		49824DFC26F09F3C0051C7BF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		49824E0026F0A7490051C7BF /* RepoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetail.swift; sourceTree = "<group>"; };
 		4982A1C626C2515D0051C3FD /* AppPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPart.swift; sourceTree = "<group>"; };
 		4982A1C826C275090051C3FD /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
 		49B9425C26EF3DDA003C3BC5 /* RepoListReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListReactor.swift; sourceTree = "<group>"; };
@@ -177,6 +183,7 @@
 			children = (
 				4982A1C426C251390051C3FD /* AppDelegate */,
 				4982A1C526C251470051C3FD /* Dependency */,
+				49824E0226F0A97D0051C7BF /* MainCoordinator */,
 			);
 			path = SKWApp;
 			sourceTree = "<group>";
@@ -185,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				4954725C26BD09A80025B227 /* RepoList */,
+				49824E0326F0A9B50051C7BF /* RepoDetail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -209,6 +217,23 @@
 				49B9425C26EF3DDA003C3BC5 /* RepoListReactor.swift */,
 			);
 			path = RepoList;
+			sourceTree = "<group>";
+		};
+		49824E0226F0A97D0051C7BF /* MainCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				49824DFA26F09DF90051C7BF /* Coordinator.swift */,
+				49824DFC26F09F3C0051C7BF /* MainCoordinator.swift */,
+			);
+			path = MainCoordinator;
+			sourceTree = "<group>";
+		};
+		49824E0326F0A9B50051C7BF /* RepoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				49824E0026F0A7490051C7BF /* RepoDetail.swift */,
+			);
+			path = RepoDetail;
 			sourceTree = "<group>";
 		};
 		4982A1C426C251390051C3FD /* AppDelegate */ = {
@@ -323,6 +348,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49824DFD26F09F3C0051C7BF /* MainCoordinator.swift in Sources */,
+				49824DFB26F09DF90051C7BF /* Coordinator.swift in Sources */,
+				49824E0126F0A7490051C7BF /* RepoDetail.swift in Sources */,
 				4912EDC026C0E56900E9121E /* RepositoryRequest.swift in Sources */,
 				4982A1C926C275090051C3FD /* RepositoryService.swift in Sources */,
 				493679BA26EF6EFD00EC62B9 /* AppError.swift in Sources */,
