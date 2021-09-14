@@ -1,11 +1,11 @@
 import Foundation
 
-struct ErrorRepos {
+struct ErrorModel {
   let message: String
   let documentation: String
 }
 
-extension ErrorRepos: Codable, Hashable {
+extension ErrorModel: Codable, Hashable {
   enum CodingKeys: String, CodingKey {
     case message
     case documentation = "documentation_url"

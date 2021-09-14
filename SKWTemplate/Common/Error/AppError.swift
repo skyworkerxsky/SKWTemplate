@@ -1,6 +1,6 @@
 import Foundation
 
-enum RepoError {
+enum AppError {
   case unknown
   case with(message: String)
   
@@ -11,7 +11,7 @@ enum RepoError {
   }
 }
 
-extension RepoError: LocalizedError {
+extension AppError: LocalizedError {
   var errorDescription: String? {
     switch self {
     case .unknown:

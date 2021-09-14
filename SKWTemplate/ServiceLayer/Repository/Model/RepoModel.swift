@@ -1,11 +1,11 @@
 import Foundation
 
-struct Repo {
+struct RepoModel {
   let id: Int
   let name: String
 }
 
-extension Repo: Codable, Hashable {
+extension RepoModel: Codable, Hashable {
   enum CodingKeys: String, CodingKey {
     case id
     case name

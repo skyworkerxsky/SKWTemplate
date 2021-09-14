@@ -13,10 +13,10 @@ extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
   }
   
   fileprivate func parsingErrors(with response: Response) -> Single<Response> {
-    let model = try? JSONDecoder().decode(ErrorRepos.self, from: response.data)
+    let model = try? JSONDecoder().decode(ErrorModel.self, from: response.data)
     if let errors = model?.message {
-      return .error(RepoError(message: errors))
+      return .error(AppError(message: errors))
     }
-    return .error(RepoError.unknown)
+    return .error(AppError.unknown)
   }
 }

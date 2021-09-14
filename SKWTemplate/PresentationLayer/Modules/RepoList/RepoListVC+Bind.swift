@@ -27,8 +27,8 @@ extension RepoListVC: View {
       .disposed(by: disposeBag)
     
     // error handling
-    state.map(\.isError)
-      .filter { $0 }
+    state.map(\.error)
+      .filter { $0.isError && !$0.message.isEmpty }
       .bind {
         print("isError - ", $0)
       }

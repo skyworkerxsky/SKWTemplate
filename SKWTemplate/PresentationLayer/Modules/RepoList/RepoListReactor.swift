@@ -11,6 +11,7 @@ final class ReactorListPart: DIPart {
   }
 }
 
+
 final class RepoListVCReactor: Reactor {
   
   // MARK: - Private
@@ -32,9 +33,9 @@ final class RepoListVCReactor: Reactor {
   // MARK: - State
   
   struct State: Equatable {
-    var repositories: [Repo] = []
+    var repositories: [RepoModel] = []
     var isLoading: Bool = false
-    var isError: Bool = false
+    var error: RepoError = .init()
   }
   
   // MARK: - Action
@@ -46,9 +47,9 @@ final class RepoListVCReactor: Reactor {
   // MARK: - Mutation
   
   public enum Mutation: Equatable {
-    case setRepos([Repo] = [])
+    case setRepos([RepoModel] = [])
     case setLoading(Bool)
-    case setError(Bool)
+    case setError(RepoError)
   }
   
   // MARK: - Implementation
@@ -65,8 +66,9 @@ final class RepoListVCReactor: Reactor {
       let setRepos: Observable<Mutation> = repoService.fetchRepositories()
         .map { .setRepos($0) }
         .catchError({ err in
-          print("error - ", err.localizedDescription)
-          return Observable.merge(.just(.setError(true)))
+          Observable.merge([
+            .just(.setError(RepoError(message: err.localizedDescription, isError: true)))
+          ])
         })
       
       return setLoading.concat(setRepos)
@@ -83,7 +85,7 @@ final class RepoListVCReactor: Reactor {
     case let .setLoading(condition):
       newState.isLoading = condition
     case let .setError(error):
-      newState.isError = error
+      newState.error = error
     }
     
     return newState

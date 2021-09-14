@@ -25,7 +25,7 @@ class RepoServicePart: DIPart {
 }
 
 protocol RepositoryService {
-  func fetchRepositories() -> Observable<[Repo]>
+  func fetchRepositories() -> Observable<[RepoModel]>
 }
 
 final class RepositoryServiceImplementation: RepositoryService {
@@ -36,12 +36,12 @@ final class RepositoryServiceImplementation: RepositoryService {
     self.provider = provider
   }
   
-  func fetchRepositories() -> Observable<[Repo]> {
+  func fetchRepositories() -> Observable<[RepoModel]> {
     provider
       .rx
       .request(.repositories)
       .filterSuccess()
-      .map(RepoResponse.self, failsOnEmptyData: false)
+      .map(RepoResponseModel.self, failsOnEmptyData: false)
       .map { $0.items }
       .asObservable()
   } 
