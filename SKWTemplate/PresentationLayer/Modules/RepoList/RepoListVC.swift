@@ -35,9 +35,7 @@ class RepoListVC: UIViewController, Coordinating  {
      activityIndicator].forEach { view.addSubview($0) }
   }
   
-  private func configureUI() {
-    view.backgroundColor = .white
-  }
+  private func configureUI() {}
   
   private func configureLayout() {
     tableView.pin.top().left().right().bottom()

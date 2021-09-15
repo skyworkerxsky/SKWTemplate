@@ -15,7 +15,6 @@
 		493679BD26EF700A00EC62B9 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493679BC26EF700A00EC62B9 /* ErrorHandling.swift */; };
 		493C555926EF627A00AB6765 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493C555826EF627A00AB6765 /* ErrorModel.swift */; };
 		4954724626BD07500025B227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954724526BD07500025B227 /* AppDelegate.swift */; };
-		4954724826BD07500025B227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954724726BD07500025B227 /* SceneDelegate.swift */; };
 		4954724A26BD07500025B227 /* RepoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954724926BD07500025B227 /* RepoListVC.swift */; };
 		4954724F26BD07520025B227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4954724E26BD07520025B227 /* Assets.xcassets */; };
 		4954725226BD07520025B227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4954725026BD07520025B227 /* LaunchScreen.storyboard */; };
@@ -23,6 +22,8 @@
 		49824DFB26F09DF90051C7BF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49824DFA26F09DF90051C7BF /* Coordinator.swift */; };
 		49824DFD26F09F3C0051C7BF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49824DFC26F09F3C0051C7BF /* MainCoordinator.swift */; };
 		49824E0126F0A7490051C7BF /* RepoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49824E0026F0A7490051C7BF /* RepoDetail.swift */; };
+		49824E0726F0B8080051C7BF /* DependenciesConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49824E0626F0B8080051C7BF /* DependenciesConfiguration.swift */; };
+		49824E0D26F0C2EA0051C7BF /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49824E0C26F0C2EA0051C7BF /* AppRouter.swift */; };
 		4982A1C726C2515D0051C3FD /* AppPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982A1C626C2515D0051C3FD /* AppPart.swift */; };
 		4982A1C926C275090051C3FD /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982A1C826C275090051C3FD /* RepositoryService.swift */; };
 		49B9425D26EF3DDA003C3BC5 /* RepoListReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9425C26EF3DDA003C3BC5 /* RepoListReactor.swift */; };
@@ -47,7 +48,6 @@
 		493C555826EF627A00AB6765 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		4954724226BD07500025B227 /* SKWTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKWTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4954724526BD07500025B227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4954724726BD07500025B227 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4954724926BD07500025B227 /* RepoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListVC.swift; sourceTree = "<group>"; };
 		4954724E26BD07520025B227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4954725126BD07520025B227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +56,8 @@
 		49824DFA26F09DF90051C7BF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		49824DFC26F09F3C0051C7BF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		49824E0026F0A7490051C7BF /* RepoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetail.swift; sourceTree = "<group>"; };
+		49824E0626F0B8080051C7BF /* DependenciesConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesConfiguration.swift; sourceTree = "<group>"; };
+		49824E0C26F0C2EA0051C7BF /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		4982A1C626C2515D0051C3FD /* AppPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPart.swift; sourceTree = "<group>"; };
 		4982A1C826C275090051C3FD /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
 		49B9425C26EF3DDA003C3BC5 /* RepoListReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListReactor.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			children = (
 				49824DFA26F09DF90051C7BF /* Coordinator.swift */,
 				49824DFC26F09F3C0051C7BF /* MainCoordinator.swift */,
+				49824E0C26F0C2EA0051C7BF /* AppRouter.swift */,
 			);
 			path = MainCoordinator;
 			sourceTree = "<group>";
@@ -240,7 +243,6 @@
 			isa = PBXGroup;
 			children = (
 				4954724526BD07500025B227 /* AppDelegate.swift */,
-				4954724726BD07500025B227 /* SceneDelegate.swift */,
 				49108E4B26CA627800CDD833 /* ContainerDI.swift */,
 			);
 			path = AppDelegate;
@@ -249,6 +251,7 @@
 		4982A1C526C251470051C3FD /* Dependency */ = {
 			isa = PBXGroup;
 			children = (
+				49824E0626F0B8080051C7BF /* DependenciesConfiguration.swift */,
 				4982A1C626C2515D0051C3FD /* AppPart.swift */,
 			);
 			path = Dependency;
@@ -353,8 +356,10 @@
 				49824E0126F0A7490051C7BF /* RepoDetail.swift in Sources */,
 				4912EDC026C0E56900E9121E /* RepositoryRequest.swift in Sources */,
 				4982A1C926C275090051C3FD /* RepositoryService.swift in Sources */,
+				49824E0726F0B8080051C7BF /* DependenciesConfiguration.swift in Sources */,
 				493679BA26EF6EFD00EC62B9 /* AppError.swift in Sources */,
 				49C3622826F0810E001E69B8 /* RepoError.swift in Sources */,
+				49824E0D26F0C2EA0051C7BF /* AppRouter.swift in Sources */,
 				4912EDC226C0E7F600E9121E /* RepoModel.swift in Sources */,
 				49108E4C26CA627800CDD833 /* ContainerDI.swift in Sources */,
 				493C555926EF627A00AB6765 /* ErrorModel.swift in Sources */,
@@ -365,7 +370,6 @@
 				4954724626BD07500025B227 /* AppDelegate.swift in Sources */,
 				493679BD26EF700A00EC62B9 /* ErrorHandling.swift in Sources */,
 				49F4D18E26BD5D8B00F26C0C /* RepoListVC+Bind.swift in Sources */,
-				4954724826BD07500025B227 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -489,7 +493,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

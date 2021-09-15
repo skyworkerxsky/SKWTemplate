@@ -5,11 +5,24 @@
 //  Created by Алексей Макаров on 14.09.2021.
 //
 
-import Foundation
 import UIKit
+import DITranquillity
 
-class MainCoordinator: Coordinator {
+open class MainCoordinator: Coordinator {
   var navigationController: UINavigationController?
+  
+  public static var shared: MainCoordinator!
+  
+  open var configuration: DependenciesConfiguration
+  open var container: DIContainer
+  
+  private var router: AppRouter!
+  
+  init(configuration: DependenciesConfiguration) {
+      self.configuration = configuration
+      self.container = self.configuration.configuredContainer()
+      self.router = AppRouter()
+  }
   
   func eventOccured(with type: Event) {
     switch type {
@@ -23,13 +36,7 @@ class MainCoordinator: Coordinator {
   }
   
   private func openRepoList() {
-    let reactor: RepoListVCReactor = ContainerDI.container.resolve()
-    
-    let vc = RepoListVC()
-    vc.reactor = reactor
-    vc.coordinator = self
-    
-    navigationController?.setViewControllers([vc], animated: false)
+    router.openDefaultScene()
   }
   
   private func openRepoDetail() {
