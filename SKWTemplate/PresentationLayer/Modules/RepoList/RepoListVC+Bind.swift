@@ -13,8 +13,9 @@ extension RepoListVC: View {
       .disposed(by: disposeBag)
     
     tableView.rx.itemSelected
-      .subscribe(onNext: { [self] _ in
-        self.coordinator?.eventOccured(with: .openDetail)
+      .subscribe(onNext: { [self] item in
+        let currentItem = reactor.currentState.repositories[item.item]
+        self.router.openDetail(repo: currentItem)
       })
       .disposed(by: disposeBag)
     

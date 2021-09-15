@@ -8,7 +8,7 @@
 import UIKit
 import DITranquillity
 
-open class MainCoordinator: Coordinator {
+open class MainCoordinator {
   var navigationController: UINavigationController?
   
   public static var shared: MainCoordinator!
@@ -24,26 +24,12 @@ open class MainCoordinator: Coordinator {
       self.router = AppRouter()
   }
   
-  func eventOccured(with type: Event) {
-    switch type {
-    case .openDetail:
-      openRepoDetail()
-    }
-  }
-  
   func start() {
     openRepoList()
   }
   
   private func openRepoList() {
     router.openDefaultScene()
-  }
-  
-  private func openRepoDetail() {
-    let vc = RepoDetail()
-    vc.coordinator = self
-    
-    navigationController?.pushViewController(vc, animated: true)
   }
   
 }

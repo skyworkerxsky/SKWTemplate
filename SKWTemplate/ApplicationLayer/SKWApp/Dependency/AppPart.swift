@@ -13,7 +13,8 @@ public class AppPart: DIFramework {
   public static func load(container: DIContainer) {
     // registrations will be placed here
     container.append(part: ServicesPart.self)
-    container.append(part: ReactorPart.self)
+    container.append(part: ReactorsPart.self)
+    container.append(part: PresentersPart.self)
   }
 }
 
@@ -29,9 +30,22 @@ private class ServicesPart: DIPart {
   }
 }
 
-private class ReactorPart: DIPart {
+private class ReactorsPart: DIPart {
   static let parts: [DIPart.Type] = [
     ReactorListPart.self,
+  ]
+  
+  static func load(container: DIContainer) {
+    for part in self.parts {
+      container.append(part: part)
+    }
+  }
+}
+
+private class PresentersPart: DIPart {
+  static let parts: [DIPart.Type] = [
+    RepoListPart.self,
+    RepoDetailPart.self,
   ]
   
   static func load(container: DIContainer) {

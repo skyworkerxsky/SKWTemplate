@@ -2,9 +2,14 @@ import UIKit
 import RxSwift
 import PinLayout
 
-class RepoListVC: UIViewController, Coordinating  {
+protocol RepoListEventHandler: AnyObject {
+  func bind(view: UIViewController, router: RepoListRoutable)
+}
+
+class RepoListVC: UIViewController {
   
-  var coordinator: Coordinator?
+  var handler: RepoListEventHandler!
+  var router: RepoListRoutable!
   
   var disposeBag = DisposeBag()
   
@@ -41,5 +46,5 @@ class RepoListVC: UIViewController, Coordinating  {
     tableView.pin.top().left().right().bottom()
     activityIndicator.pin.center()
   }
-
+  
 }

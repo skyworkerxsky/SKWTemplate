@@ -19,7 +19,14 @@
 		4954724F26BD07520025B227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4954724E26BD07520025B227 /* Assets.xcassets */; };
 		4954725226BD07520025B227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4954725026BD07520025B227 /* LaunchScreen.storyboard */; };
 		4954726126BD0B500025B227 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4954726026BD0B500025B227 /* Main.storyboard */; };
-		49824DFB26F09DF90051C7BF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49824DFA26F09DF90051C7BF /* Coordinator.swift */; };
+		496884A926F1E3D6002B7F1A /* RepoDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496884A826F1E3D6002B7F1A /* RepoDetailAssembly.swift */; };
+		496884AC26F1E463002B7F1A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496884AB26F1E463002B7F1A /* Router.swift */; };
+		496884AE26F1E498002B7F1A /* RepoDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496884AD26F1E498002B7F1A /* RepoDetailRouter.swift */; };
+		496884B026F1E54E002B7F1A /* PushRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496884AF26F1E54E002B7F1A /* PushRouter.swift */; };
+		496884B226F1E75D002B7F1A /* RepoListVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496884B126F1E75D002B7F1A /* RepoListVCRouter.swift */; };
+		496884B426F1E7AB002B7F1A /* RepoListVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496884B326F1E7AB002B7F1A /* RepoListVCAssembly.swift */; };
+		496884B626F1ED6D002B7F1A /* RepoListVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496884B526F1ED6D002B7F1A /* RepoListVCPresenter.swift */; };
+		496884B826F1FE28002B7F1A /* RepoDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496884B726F1FE28002B7F1A /* RepoDetailPresenter.swift */; };
 		49824DFD26F09F3C0051C7BF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49824DFC26F09F3C0051C7BF /* MainCoordinator.swift */; };
 		49824E0126F0A7490051C7BF /* RepoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49824E0026F0A7490051C7BF /* RepoDetail.swift */; };
 		49824E0726F0B8080051C7BF /* DependenciesConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49824E0626F0B8080051C7BF /* DependenciesConfiguration.swift */; };
@@ -53,7 +60,14 @@
 		4954725126BD07520025B227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4954725326BD07520025B227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4954726026BD0B500025B227 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		49824DFA26F09DF90051C7BF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		496884A826F1E3D6002B7F1A /* RepoDetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailAssembly.swift; sourceTree = "<group>"; };
+		496884AB26F1E463002B7F1A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		496884AD26F1E498002B7F1A /* RepoDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailRouter.swift; sourceTree = "<group>"; };
+		496884AF26F1E54E002B7F1A /* PushRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushRouter.swift; sourceTree = "<group>"; };
+		496884B126F1E75D002B7F1A /* RepoListVCRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListVCRouter.swift; sourceTree = "<group>"; };
+		496884B326F1E7AB002B7F1A /* RepoListVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListVCAssembly.swift; sourceTree = "<group>"; };
+		496884B526F1ED6D002B7F1A /* RepoListVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListVCPresenter.swift; sourceTree = "<group>"; };
+		496884B726F1FE28002B7F1A /* RepoDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailPresenter.swift; sourceTree = "<group>"; };
 		49824DFC26F09F3C0051C7BF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		49824E0026F0A7490051C7BF /* RepoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetail.swift; sourceTree = "<group>"; };
 		49824E0626F0B8080051C7BF /* DependenciesConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesConfiguration.swift; sourceTree = "<group>"; };
@@ -113,6 +127,7 @@
 		4912EDC526C1083300E9121E /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				496884AA26F1E459002B7F1A /* BaseClasses */,
 				4954725A26BD07710025B227 /* Modules */,
 			);
 			path = PresentationLayer;
@@ -214,17 +229,28 @@
 			isa = PBXGroup;
 			children = (
 				49C3622626F08077001E69B8 /* Common */,
+				49B9425C26EF3DDA003C3BC5 /* RepoListReactor.swift */,
 				4954724926BD07500025B227 /* RepoListVC.swift */,
 				49F4D18D26BD5D8B00F26C0C /* RepoListVC+Bind.swift */,
-				49B9425C26EF3DDA003C3BC5 /* RepoListReactor.swift */,
+				496884B326F1E7AB002B7F1A /* RepoListVCAssembly.swift */,
+				496884B526F1ED6D002B7F1A /* RepoListVCPresenter.swift */,
+				496884B126F1E75D002B7F1A /* RepoListVCRouter.swift */,
 			);
 			path = RepoList;
+			sourceTree = "<group>";
+		};
+		496884AA26F1E459002B7F1A /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				496884AB26F1E463002B7F1A /* Router.swift */,
+				496884AF26F1E54E002B7F1A /* PushRouter.swift */,
+			);
+			path = BaseClasses;
 			sourceTree = "<group>";
 		};
 		49824E0226F0A97D0051C7BF /* MainCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				49824DFA26F09DF90051C7BF /* Coordinator.swift */,
 				49824DFC26F09F3C0051C7BF /* MainCoordinator.swift */,
 				49824E0C26F0C2EA0051C7BF /* AppRouter.swift */,
 			);
@@ -235,6 +261,9 @@
 			isa = PBXGroup;
 			children = (
 				49824E0026F0A7490051C7BF /* RepoDetail.swift */,
+				496884A826F1E3D6002B7F1A /* RepoDetailAssembly.swift */,
+				496884B726F1FE28002B7F1A /* RepoDetailPresenter.swift */,
+				496884AD26F1E498002B7F1A /* RepoDetailRouter.swift */,
 			);
 			path = RepoDetail;
 			sourceTree = "<group>";
@@ -352,18 +381,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				49824DFD26F09F3C0051C7BF /* MainCoordinator.swift in Sources */,
-				49824DFB26F09DF90051C7BF /* Coordinator.swift in Sources */,
 				49824E0126F0A7490051C7BF /* RepoDetail.swift in Sources */,
 				4912EDC026C0E56900E9121E /* RepositoryRequest.swift in Sources */,
 				4982A1C926C275090051C3FD /* RepositoryService.swift in Sources */,
+				496884B026F1E54E002B7F1A /* PushRouter.swift in Sources */,
 				49824E0726F0B8080051C7BF /* DependenciesConfiguration.swift in Sources */,
+				496884B426F1E7AB002B7F1A /* RepoListVCAssembly.swift in Sources */,
 				493679BA26EF6EFD00EC62B9 /* AppError.swift in Sources */,
 				49C3622826F0810E001E69B8 /* RepoError.swift in Sources */,
 				49824E0D26F0C2EA0051C7BF /* AppRouter.swift in Sources */,
+				496884B226F1E75D002B7F1A /* RepoListVCRouter.swift in Sources */,
+				496884AE26F1E498002B7F1A /* RepoDetailRouter.swift in Sources */,
 				4912EDC226C0E7F600E9121E /* RepoModel.swift in Sources */,
 				49108E4C26CA627800CDD833 /* ContainerDI.swift in Sources */,
 				493C555926EF627A00AB6765 /* ErrorModel.swift in Sources */,
+				496884A926F1E3D6002B7F1A /* RepoDetailAssembly.swift in Sources */,
+				496884AC26F1E463002B7F1A /* Router.swift in Sources */,
+				496884B826F1FE28002B7F1A /* RepoDetailPresenter.swift in Sources */,
 				49B9425D26EF3DDA003C3BC5 /* RepoListReactor.swift in Sources */,
+				496884B626F1ED6D002B7F1A /* RepoListVCPresenter.swift in Sources */,
 				4912EDC826C1093F00E9121E /* RepoResponseModel.swift in Sources */,
 				4954724A26BD07500025B227 /* RepoListVC.swift in Sources */,
 				4982A1C726C2515D0051C3FD /* AppPart.swift in Sources */,

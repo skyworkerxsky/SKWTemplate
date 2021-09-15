@@ -13,12 +13,7 @@ public class AppRouter {
   }
   
   public func openDefaultScene() {
-    let reactor: RepoListVCReactor = MainCoordinator.shared.container.resolve()
-    
-    let module = RepoListVC()
-    module.reactor = reactor
-    module.coordinator = MainCoordinator.shared
-    
+    let module = RepoListVCAssembly.createModule()
     let nc = UINavigationController(rootViewController: module)
     
     ShowWindowRouter(target: nc,
