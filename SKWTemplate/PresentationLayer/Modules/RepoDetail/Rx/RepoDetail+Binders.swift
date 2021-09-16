@@ -14,7 +14,7 @@ extension Reactive where Base: RepoDetail {
     Binder(base) { detailVC, repo in
       guard let url = URL(string: repo.url) else { return }
       let request = URLRequest(url: url)
-      detailVC.webView.loadRequest(request)
+      detailVC.webView.load(request)
     }
   }
 }

@@ -18,7 +18,6 @@
 		4954724A26BD07500025B227 /* RepoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954724926BD07500025B227 /* RepoListVC.swift */; };
 		4954724F26BD07520025B227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4954724E26BD07520025B227 /* Assets.xcassets */; };
 		4954725226BD07520025B227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4954725026BD07520025B227 /* LaunchScreen.storyboard */; };
-		4954726126BD0B500025B227 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4954726026BD0B500025B227 /* Main.storyboard */; };
 		496884A926F1E3D6002B7F1A /* RepoDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496884A826F1E3D6002B7F1A /* RepoDetailAssembly.swift */; };
 		496884AC26F1E463002B7F1A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496884AB26F1E463002B7F1A /* Router.swift */; };
 		496884AE26F1E498002B7F1A /* RepoDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496884AD26F1E498002B7F1A /* RepoDetailRouter.swift */; };
@@ -62,7 +61,6 @@
 		4954724E26BD07520025B227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4954725126BD07520025B227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4954725326BD07520025B227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4954726026BD0B500025B227 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		496884A826F1E3D6002B7F1A /* RepoDetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailAssembly.swift; sourceTree = "<group>"; };
 		496884AB26F1E463002B7F1A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		496884AD26F1E498002B7F1A /* RepoDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailRouter.swift; sourceTree = "<group>"; };
@@ -226,7 +224,6 @@
 				4954724E26BD07520025B227 /* Assets.xcassets */,
 				4954725026BD07520025B227 /* LaunchScreen.storyboard */,
 				4954725326BD07520025B227 /* Info.plist */,
-				4954726026BD0B500025B227 /* Main.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -384,7 +381,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4954726126BD0B500025B227 /* Main.storyboard in Resources */,
 				4954725226BD07520025B227 /* LaunchScreen.storyboard in Resources */,
 				4954724F26BD07520025B227 /* Assets.xcassets in Resources */,
 			);
