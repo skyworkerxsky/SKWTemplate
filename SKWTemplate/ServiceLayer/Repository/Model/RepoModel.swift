@@ -1,6 +1,6 @@
 import Foundation
 
-struct RepoModel {
+public struct RepoModel {
   let id: Int
   let name: String
   let url: String

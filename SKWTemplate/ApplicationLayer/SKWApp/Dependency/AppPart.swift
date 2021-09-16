@@ -33,6 +33,7 @@ private class ServicesPart: DIPart {
 private class ReactorsPart: DIPart {
   static let parts: [DIPart.Type] = [
     ReactorListPart.self,
+    ReactorDetailPart.self
   ]
   
   static func load(container: DIContainer) {

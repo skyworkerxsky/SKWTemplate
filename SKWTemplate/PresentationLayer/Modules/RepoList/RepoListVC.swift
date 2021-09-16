@@ -6,7 +6,7 @@ protocol RepoListEventHandler: AnyObject {
   func bind(view: UIViewController, router: RepoListRoutable)
 }
 
-class RepoListVC: UIViewController {
+final class RepoListVC: UIViewController {
   
   var handler: RepoListEventHandler!
   var router: RepoListRoutable!

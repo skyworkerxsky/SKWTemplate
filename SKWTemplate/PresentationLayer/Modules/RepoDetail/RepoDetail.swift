@@ -7,6 +7,7 @@
 
 import UIKit
 import PinLayout
+import RxSwift
 
 protocol RepoDetailEventHandler: AnyObject {
   func bind(view: UIViewController,
@@ -14,9 +15,9 @@ protocol RepoDetailEventHandler: AnyObject {
             data: RepoModel)
 }
 
-class RepoDetail: UIViewController {
+public final class RepoDetail: UIViewController {
   
-  public var repo: RepoModel!
+  public var disposeBag = DisposeBag()
   
   private(set) lazy var webView: UIWebView = .init()
   private(set) lazy var activityIndicator: UIActivityIndicatorView = {
@@ -28,7 +29,7 @@ class RepoDetail: UIViewController {
   
   var handler: RepoDetailEventHandler!
   
-  override func viewDidLoad() {
+  public override func viewDidLoad() {
     super.viewDidLoad()
     
     createUI()
@@ -43,11 +44,6 @@ class RepoDetail: UIViewController {
   
   private func configureUI() {
     webView.delegate = self
-    title = repo.name
-    
-    guard let url = URL(string: repo.url) else { return }
-    let request = URLRequest(url: url)
-    webView.loadRequest(request)
   }
   
   private func configureLayout() {
@@ -58,7 +54,7 @@ class RepoDetail: UIViewController {
 }
 
 extension RepoDetail: UIWebViewDelegate {
-  func webViewDidFinishLoad(_ webView: UIWebView) {
+  public func webViewDidFinishLoad(_ webView: UIWebView) {
     activityIndicator.stopAnimating()
   }
 }

@@ -27,6 +27,9 @@
 		496884B426F1E7AB002B7F1A /* RepoListVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496884B326F1E7AB002B7F1A /* RepoListVCAssembly.swift */; };
 		496884B626F1ED6D002B7F1A /* RepoListVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496884B526F1ED6D002B7F1A /* RepoListVCPresenter.swift */; };
 		496884B826F1FE28002B7F1A /* RepoDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496884B726F1FE28002B7F1A /* RepoDetailPresenter.swift */; };
+		496884BE26F349DF002B7F1A /* RepoDetailReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496884BD26F349DF002B7F1A /* RepoDetailReactor.swift */; };
+		496884C026F34AAB002B7F1A /* RepoDetail+Bind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496884BF26F34AAB002B7F1A /* RepoDetail+Bind.swift */; };
+		496884C326F35357002B7F1A /* RepoDetail+Binders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496884C226F35357002B7F1A /* RepoDetail+Binders.swift */; };
 		49824DFD26F09F3C0051C7BF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49824DFC26F09F3C0051C7BF /* MainCoordinator.swift */; };
 		49824E0126F0A7490051C7BF /* RepoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49824E0026F0A7490051C7BF /* RepoDetail.swift */; };
 		49824E0726F0B8080051C7BF /* DependenciesConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49824E0626F0B8080051C7BF /* DependenciesConfiguration.swift */; };
@@ -68,6 +71,9 @@
 		496884B326F1E7AB002B7F1A /* RepoListVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListVCAssembly.swift; sourceTree = "<group>"; };
 		496884B526F1ED6D002B7F1A /* RepoListVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListVCPresenter.swift; sourceTree = "<group>"; };
 		496884B726F1FE28002B7F1A /* RepoDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailPresenter.swift; sourceTree = "<group>"; };
+		496884BD26F349DF002B7F1A /* RepoDetailReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailReactor.swift; sourceTree = "<group>"; };
+		496884BF26F34AAB002B7F1A /* RepoDetail+Bind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoDetail+Bind.swift"; sourceTree = "<group>"; };
+		496884C226F35357002B7F1A /* RepoDetail+Binders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoDetail+Binders.swift"; sourceTree = "<group>"; };
 		49824DFC26F09F3C0051C7BF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		49824E0026F0A7490051C7BF /* RepoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetail.swift; sourceTree = "<group>"; };
 		49824E0626F0B8080051C7BF /* DependenciesConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesConfiguration.swift; sourceTree = "<group>"; };
@@ -248,6 +254,14 @@
 			path = BaseClasses;
 			sourceTree = "<group>";
 		};
+		496884C126F35344002B7F1A /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				496884C226F35357002B7F1A /* RepoDetail+Binders.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
 		49824E0226F0A97D0051C7BF /* MainCoordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,9 +274,12 @@
 		49824E0326F0A9B50051C7BF /* RepoDetail */ = {
 			isa = PBXGroup;
 			children = (
+				496884C126F35344002B7F1A /* Rx */,
 				49824E0026F0A7490051C7BF /* RepoDetail.swift */,
+				496884BF26F34AAB002B7F1A /* RepoDetail+Bind.swift */,
 				496884A826F1E3D6002B7F1A /* RepoDetailAssembly.swift */,
 				496884B726F1FE28002B7F1A /* RepoDetailPresenter.swift */,
+				496884BD26F349DF002B7F1A /* RepoDetailReactor.swift */,
 				496884AD26F1E498002B7F1A /* RepoDetailRouter.swift */,
 			);
 			path = RepoDetail;
@@ -380,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				496884C326F35357002B7F1A /* RepoDetail+Binders.swift in Sources */,
 				49824DFD26F09F3C0051C7BF /* MainCoordinator.swift in Sources */,
 				49824E0126F0A7490051C7BF /* RepoDetail.swift in Sources */,
 				4912EDC026C0E56900E9121E /* RepositoryRequest.swift in Sources */,
@@ -392,10 +410,12 @@
 				49824E0D26F0C2EA0051C7BF /* AppRouter.swift in Sources */,
 				496884B226F1E75D002B7F1A /* RepoListVCRouter.swift in Sources */,
 				496884AE26F1E498002B7F1A /* RepoDetailRouter.swift in Sources */,
+				496884BE26F349DF002B7F1A /* RepoDetailReactor.swift in Sources */,
 				4912EDC226C0E7F600E9121E /* RepoModel.swift in Sources */,
 				49108E4C26CA627800CDD833 /* ContainerDI.swift in Sources */,
 				493C555926EF627A00AB6765 /* ErrorModel.swift in Sources */,
 				496884A926F1E3D6002B7F1A /* RepoDetailAssembly.swift in Sources */,
+				496884C026F34AAB002B7F1A /* RepoDetail+Bind.swift in Sources */,
 				496884AC26F1E463002B7F1A /* Router.swift in Sources */,
 				496884B826F1FE28002B7F1A /* RepoDetailPresenter.swift in Sources */,
 				49B9425D26EF3DDA003C3BC5 /* RepoListReactor.swift in Sources */,

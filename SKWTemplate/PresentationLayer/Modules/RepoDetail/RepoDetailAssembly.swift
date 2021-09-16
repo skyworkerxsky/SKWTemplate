@@ -11,7 +11,9 @@ import Foundation
 
 final class RepoDetailAssembly {
   class func createModule(repo: RepoModel, parent: Router?) -> RepoDetail {
+    let reactor: RepoDetailReactor = MainCoordinator.shared.container.resolve()
     let module = RepoDetail()
+    module.reactor = reactor
     let router = RepoDetailRouter(view: module, parent: parent)
     module.handler = MainCoordinator.shared.container.resolve()
     module.handler.bind(view: module, router: router, data: repo)

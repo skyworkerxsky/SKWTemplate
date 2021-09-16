@@ -20,6 +20,6 @@ final class RepoDetailPresenter: RepoDetailEventHandler {
   
   func bind(view: UIViewController, router: RepoDetailRoutable, data: RepoModel) {
     let view = view as? RepoDetail
-    view?.repo = data
+    view?.reactor?.action.onNext(.initial(repo: data))
   }
 }
