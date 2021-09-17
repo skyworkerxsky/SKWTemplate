@@ -6,12 +6,12 @@ protocol RepoListEventHandler: AnyObject {
   func bind(view: UIViewController, router: RepoListRoutable)
 }
 
-final class RepoListVC: UIViewController {
+public final class RepoListVC: UIViewController {
   
   var handler: RepoListEventHandler!
   var router: RepoListRoutable!
   
-  var disposeBag = DisposeBag()
+  public var disposeBag = DisposeBag()
   
   private(set) lazy var activityIndicator: UIActivityIndicatorView = {
     let activityIndicator: UIActivityIndicatorView = .init()
@@ -27,7 +27,7 @@ final class RepoListVC: UIViewController {
     return tableView
   }()
   
-  override func viewDidLoad() {
+  public override func viewDidLoad() {
     super.viewDidLoad()
     
     createUI()

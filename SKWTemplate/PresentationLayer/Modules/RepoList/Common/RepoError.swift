@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RepoError: Hashable {
+public struct RepoError: Hashable {
   let message: String
   let isError: Bool
   

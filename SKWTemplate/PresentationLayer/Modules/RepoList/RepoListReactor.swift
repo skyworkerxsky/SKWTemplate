@@ -11,7 +11,7 @@ final class ReactorListPart: DIPart {
   }
 }
 
-final class RepoListVCReactor: Reactor {
+public final class RepoListVCReactor: Reactor {
   
   // MARK: - Private
   
@@ -19,7 +19,7 @@ final class RepoListVCReactor: Reactor {
   
   // MARK: - Initial
   
-  internal let initialState: RepoListVCReactor.State
+  public let initialState: RepoListVCReactor.State
   
   // MARK: - Init
   
@@ -31,7 +31,7 @@ final class RepoListVCReactor: Reactor {
   
   // MARK: - State
   
-  struct State: Equatable {
+  public struct State: Equatable {
     var repositories: [RepoModel] = []
     var isLoading: Bool = false
     var error: RepoError = .init()
@@ -41,7 +41,7 @@ final class RepoListVCReactor: Reactor {
   
   // MARK: - Action
   
-  enum Action: Equatable {
+  public enum Action: Equatable {
     case fetchRepos(page: Int = 1)
   }
   
@@ -56,12 +56,12 @@ final class RepoListVCReactor: Reactor {
   
   // MARK: - Implementation
   
-  func transform(action: Observable<Action>) -> Observable<Action> {
+  public func transform(action: Observable<Action>) -> Observable<Action> {
     action
       .startWith(.fetchRepos())
   }
   
-  func mutate(action: Action) -> Observable<Mutation> {
+  public func mutate(action: Action) -> Observable<Mutation> {
     switch action {
     case let .fetchRepos(page):
       let setLoading: Observable<Mutation> = .just(.setLoading(page == 1))
@@ -77,7 +77,7 @@ final class RepoListVCReactor: Reactor {
     }
   }
   
-  func reduce(state: State, mutation: Mutation) -> State {
+  public func reduce(state: State, mutation: Mutation) -> State {
     var newState = state
     
     switch mutation {

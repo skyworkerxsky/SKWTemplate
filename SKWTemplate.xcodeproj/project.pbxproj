@@ -36,6 +36,7 @@
 		4982A1C726C2515D0051C3FD /* AppPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982A1C626C2515D0051C3FD /* AppPart.swift */; };
 		4982A1C926C275090051C3FD /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982A1C826C275090051C3FD /* RepositoryService.swift */; };
 		49B9425D26EF3DDA003C3BC5 /* RepoListReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9425C26EF3DDA003C3BC5 /* RepoListReactor.swift */; };
+		49C1D5CE26F48EE900689393 /* RepoListVC+Binders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1D5CD26F48EE900689393 /* RepoListVC+Binders.swift */; };
 		49C3622826F0810E001E69B8 /* RepoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C3622726F0810E001E69B8 /* RepoError.swift */; };
 		49CAA1A426EF1B90008D58F2 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 49CAA1A326EF1B90008D58F2 /* Moya */; };
 		49CAA1A626EF1B90008D58F2 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 49CAA1A526EF1B90008D58F2 /* RxMoya */; };
@@ -79,6 +80,7 @@
 		4982A1C626C2515D0051C3FD /* AppPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPart.swift; sourceTree = "<group>"; };
 		4982A1C826C275090051C3FD /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
 		49B9425C26EF3DDA003C3BC5 /* RepoListReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListReactor.swift; sourceTree = "<group>"; };
+		49C1D5CD26F48EE900689393 /* RepoListVC+Binders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoListVC+Binders.swift"; sourceTree = "<group>"; };
 		49C3622726F0810E001E69B8 /* RepoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoError.swift; sourceTree = "<group>"; };
 		49F4D18D26BD5D8B00F26C0C /* RepoListVC+Bind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoListVC+Bind.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -231,6 +233,7 @@
 		4954725C26BD09A80025B227 /* RepoList */ = {
 			isa = PBXGroup;
 			children = (
+				49C1D5CC26F48ECD00689393 /* Rx */,
 				49C3622626F08077001E69B8 /* Common */,
 				49B9425C26EF3DDA003C3BC5 /* RepoListReactor.swift */,
 				4954724926BD07500025B227 /* RepoListVC.swift */,
@@ -298,6 +301,14 @@
 				4982A1C626C2515D0051C3FD /* AppPart.swift */,
 			);
 			path = Dependency;
+			sourceTree = "<group>";
+		};
+		49C1D5CC26F48ECD00689393 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				49C1D5CD26F48EE900689393 /* RepoListVC+Binders.swift */,
+			);
+			path = Rx;
 			sourceTree = "<group>";
 		};
 		49C3622626F08077001E69B8 /* Common */ = {
@@ -405,6 +416,7 @@
 				49C3622826F0810E001E69B8 /* RepoError.swift in Sources */,
 				49824E0D26F0C2EA0051C7BF /* AppRouter.swift in Sources */,
 				496884B226F1E75D002B7F1A /* RepoListVCRouter.swift in Sources */,
+				49C1D5CE26F48EE900689393 /* RepoListVC+Binders.swift in Sources */,
 				496884AE26F1E498002B7F1A /* RepoDetailRouter.swift in Sources */,
 				496884BE26F349DF002B7F1A /* RepoDetailReactor.swift in Sources */,
 				4912EDC226C0E7F600E9121E /* RepoModel.swift in Sources */,
