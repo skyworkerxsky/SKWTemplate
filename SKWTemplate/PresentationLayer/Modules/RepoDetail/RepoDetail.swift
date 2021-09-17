@@ -44,7 +44,17 @@ public final class RepoDetail: UIViewController {
   }
   
   private func configureUI() {
-    webView.navigationDelegate = self
+    navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(share))
+  }
+  
+  @objc private func share() {
+    let image = UIImage()
+    let url = "url"
+    
+    let textShare = [image, url]
+    let activityViewController = UIActivityViewController(activityItems: textShare, applicationActivities: nil)
+    activityViewController.popoverPresentationController?.sourceView = self.view
+    self.present(activityViewController, animated: true, completion: nil)
   }
   
   private func configureLayout() {
@@ -52,10 +62,4 @@ public final class RepoDetail: UIViewController {
     activityIndicator.pin.center()
   }
   
-}
-
-extension RepoDetail: WKNavigationDelegate {
-  public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-    activityIndicator.stopAnimating()
-  }
 }

@@ -17,5 +17,11 @@ extension RepoDetail: View {
       .bind(to: rx.loadRequest)
       .disposed(by: disposeBag)
     
+    webView.rx.didFinishLoad
+      .bind(onNext: { [self] _ in
+        self.activityIndicator.stopAnimating()
+      })
+      .disposed(by: disposeBag)
+    
   }
 }
