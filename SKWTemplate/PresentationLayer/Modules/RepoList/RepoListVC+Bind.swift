@@ -19,6 +19,19 @@ extension RepoListVC: View {
       })
       .disposed(by: disposeBag)
     
+    tableView.rx.willEndDragging
+      .subscribe(onNext: { [self] in
+        let distance = self.tableView.contentSize.height - ($0.targetContentOffset.pointee.y + self.tableView.bounds.height)
+        
+        let page = reactor.currentState.page
+        let pages = reactor.currentState.pages
+        
+        if distance < 100, page < pages {
+          reactor.action.onNext(.fetchRepos(page: page + 1))
+        }
+      })
+      .disposed(by: disposeBag)
+    
     state.map(\.isLoading)
       .filter { $0 == false }
       .bind { [self] _ in

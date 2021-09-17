@@ -25,7 +25,7 @@ class RepoServicePart: DIPart {
 }
 
 protocol RepositoryService {
-  func fetchRepositories() -> Observable<[RepoModel]>
+  func fetchRepositories(page: Int) -> Observable<([RepoModel], Int)>
 }
 
 final class RepositoryServiceImplementation: RepositoryService {
@@ -36,13 +36,13 @@ final class RepositoryServiceImplementation: RepositoryService {
     self.provider = provider
   }
   
-  func fetchRepositories() -> Observable<[RepoModel]> {
+  func fetchRepositories(page: Int) -> Observable<([RepoModel], Int)> {
     provider
       .rx
-      .request(.repositories)
+      .request(.repositories(page: page))
       .filterSuccess()
       .map(RepoResponseModel.self, failsOnEmptyData: false)
-      .map { $0.items }
+      .map { ($0.items, Int(ceil(Double($0.totalCount / 15)))) }
       .asObservable()
   } 
 }

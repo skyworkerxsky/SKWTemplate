@@ -2,7 +2,7 @@ import Foundation
 import Moya
 
 public enum RepositoryRequest {
-  case repositories
+  case repositories(page: Int)
 }
 
 extension RepositoryRequest: TargetType {
@@ -30,11 +30,14 @@ extension RepositoryRequest: TargetType {
   }
   
   private var parameters: [String: String] {
-    return ["q": "language:swift",
-            "sort": "stars",
-            "order": "desc",
-            "page": "1",
-            "per_page": "15"]
+    switch self {
+    case let .repositories(page):
+      return ["q": "language:swift",
+              "sort": "stars",
+              "order": "desc",
+              "page": "\(page)",
+              "per_page": "15"]
+    }
   }
   
   public var task: Task {

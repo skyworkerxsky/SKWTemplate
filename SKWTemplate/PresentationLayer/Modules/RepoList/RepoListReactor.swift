@@ -35,18 +35,21 @@ final class RepoListVCReactor: Reactor {
     var repositories: [RepoModel] = []
     var isLoading: Bool = false
     var error: RepoError = .init()
+    var page: Int = 1
+    var pages: Int = 1
   }
   
   // MARK: - Action
   
   enum Action: Equatable {
-    case getRepos
+    case fetchRepos(page: Int = 1)
   }
   
   // MARK: - Mutation
   
   public enum Mutation: Equatable {
-    case setRepos([RepoModel] = [])
+    case setRepos([RepoModel] = [], pages: Int)
+    case addRepos([RepoModel] = [], pages: Int)
     case setLoading(Bool)
     case setError(RepoError)
   }
@@ -55,15 +58,15 @@ final class RepoListVCReactor: Reactor {
   
   func transform(action: Observable<Action>) -> Observable<Action> {
     action
-      .startWith(.getRepos)
+      .startWith(.fetchRepos())
   }
   
   func mutate(action: Action) -> Observable<Mutation> {
     switch action {
-    case .getRepos:
-      let setLoading: Observable<Mutation> = .just(.setLoading(true))
-      let setRepos: Observable<Mutation> = repoService.fetchRepositories()
-        .map { .setRepos($0) }
+    case let .fetchRepos(page):
+      let setLoading: Observable<Mutation> = .just(.setLoading(page == 1))
+      let setRepos: Observable<Mutation> = repoService.fetchRepositories(page: page)
+        .map { page > 1 ? .addRepos($0.0, pages: $0.1) : .setRepos($0.0, pages: $0.1) }
         .catchError({ err in
           Observable.merge([
             .just(.setError(RepoError(message: err.localizedDescription, isError: true)))
@@ -78,13 +81,18 @@ final class RepoListVCReactor: Reactor {
     var newState = state
     
     switch mutation {
-    case let .setRepos(data):
+    case let .setRepos(data, pages):
+      newState.pages = pages
       newState.repositories = data
       newState.isLoading = false
     case let .setLoading(condition):
       newState.isLoading = condition
     case let .setError(error):
       newState.error = error
+    case let .addRepos(repos, pages):
+      newState.page += 1
+      newState.pages = pages
+      newState.repositories.append(contentsOf: repos)
     }
     
     return newState
