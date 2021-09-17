@@ -2,10 +2,6 @@ import UIKit
 import RxSwift
 import PinLayout
 
-protocol RepoListEventHandler: AnyObject {
-  func bind(view: UIViewController, router: RepoListRoutable)
-}
-
 public final class RepoListVC: UIViewController {
   
   var handler: RepoListEventHandler!

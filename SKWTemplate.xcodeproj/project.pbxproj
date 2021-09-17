@@ -37,6 +37,9 @@
 		4982A1C926C275090051C3FD /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982A1C826C275090051C3FD /* RepositoryService.swift */; };
 		49B9425D26EF3DDA003C3BC5 /* RepoListReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9425C26EF3DDA003C3BC5 /* RepoListReactor.swift */; };
 		49C1D5CE26F48EE900689393 /* RepoListVC+Binders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1D5CD26F48EE900689393 /* RepoListVC+Binders.swift */; };
+		49C1D5D326F4A41300689393 /* RepoDetail+Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1D5D226F4A41300689393 /* RepoDetail+Handlers.swift */; };
+		49C1D5D526F4A45400689393 /* RepoListVC+Contracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1D5D426F4A45400689393 /* RepoListVC+Contracts.swift */; };
+		49C1D5D726F4A47600689393 /* RepoDetail+Contracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1D5D626F4A47600689393 /* RepoDetail+Contracts.swift */; };
 		49C3622826F0810E001E69B8 /* RepoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C3622726F0810E001E69B8 /* RepoError.swift */; };
 		49CAA1A426EF1B90008D58F2 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 49CAA1A326EF1B90008D58F2 /* Moya */; };
 		49CAA1A626EF1B90008D58F2 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 49CAA1A526EF1B90008D58F2 /* RxMoya */; };
@@ -81,6 +84,9 @@
 		4982A1C826C275090051C3FD /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
 		49B9425C26EF3DDA003C3BC5 /* RepoListReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListReactor.swift; sourceTree = "<group>"; };
 		49C1D5CD26F48EE900689393 /* RepoListVC+Binders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoListVC+Binders.swift"; sourceTree = "<group>"; };
+		49C1D5D226F4A41300689393 /* RepoDetail+Handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoDetail+Handlers.swift"; sourceTree = "<group>"; };
+		49C1D5D426F4A45400689393 /* RepoListVC+Contracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoListVC+Contracts.swift"; sourceTree = "<group>"; };
+		49C1D5D626F4A47600689393 /* RepoDetail+Contracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoDetail+Contracts.swift"; sourceTree = "<group>"; };
 		49C3622726F0810E001E69B8 /* RepoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoError.swift; sourceTree = "<group>"; };
 		49F4D18D26BD5D8B00F26C0C /* RepoListVC+Bind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoListVC+Bind.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,6 +244,7 @@
 				49B9425C26EF3DDA003C3BC5 /* RepoListReactor.swift */,
 				4954724926BD07500025B227 /* RepoListVC.swift */,
 				49F4D18D26BD5D8B00F26C0C /* RepoListVC+Bind.swift */,
+				49C1D5D426F4A45400689393 /* RepoListVC+Contracts.swift */,
 				496884B326F1E7AB002B7F1A /* RepoListVCAssembly.swift */,
 				496884B526F1ED6D002B7F1A /* RepoListVCPresenter.swift */,
 				496884B126F1E75D002B7F1A /* RepoListVCRouter.swift */,
@@ -277,6 +284,8 @@
 				496884C126F35344002B7F1A /* Rx */,
 				49824E0026F0A7490051C7BF /* RepoDetail.swift */,
 				496884BF26F34AAB002B7F1A /* RepoDetail+Bind.swift */,
+				49C1D5D626F4A47600689393 /* RepoDetail+Contracts.swift */,
+				49C1D5D226F4A41300689393 /* RepoDetail+Handlers.swift */,
 				496884A826F1E3D6002B7F1A /* RepoDetailAssembly.swift */,
 				496884B726F1FE28002B7F1A /* RepoDetailPresenter.swift */,
 				496884BD26F349DF002B7F1A /* RepoDetailReactor.swift */,
@@ -405,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				496884C326F35357002B7F1A /* RepoDetail+Binders.swift in Sources */,
+				49C1D5D326F4A41300689393 /* RepoDetail+Handlers.swift in Sources */,
 				49824DFD26F09F3C0051C7BF /* MainCoordinator.swift in Sources */,
 				49824E0126F0A7490051C7BF /* RepoDetail.swift in Sources */,
 				4912EDC026C0E56900E9121E /* RepositoryRequest.swift in Sources */,
@@ -430,7 +440,9 @@
 				496884B626F1ED6D002B7F1A /* RepoListVCPresenter.swift in Sources */,
 				4912EDC826C1093F00E9121E /* RepoResponseModel.swift in Sources */,
 				4954724A26BD07500025B227 /* RepoListVC.swift in Sources */,
+				49C1D5D726F4A47600689393 /* RepoDetail+Contracts.swift in Sources */,
 				4982A1C726C2515D0051C3FD /* AppPart.swift in Sources */,
+				49C1D5D526F4A45400689393 /* RepoListVC+Contracts.swift in Sources */,
 				4954724626BD07500025B227 /* AppDelegate.swift in Sources */,
 				493679BD26EF700A00EC62B9 /* ErrorHandling.swift in Sources */,
 				49F4D18E26BD5D8B00F26C0C /* RepoListVC+Bind.swift in Sources */,
