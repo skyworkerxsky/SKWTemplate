@@ -8,8 +8,8 @@ extension RepoDetail: View {
     
     state.map(\.repo)
       .map { $0?.name }
-      .bind { [self] in
-        self.title = $0
+      .bind { [weak self] in
+        self?.title = $0
       }
       .disposed(by: disposeBag)
     
@@ -18,8 +18,8 @@ extension RepoDetail: View {
       .disposed(by: disposeBag)
     
     webView.rx.didFinishLoad
-      .bind(onNext: { [self] _ in
-        self.activityIndicator.stopAnimating()
+      .bind(onNext: { [weak self] _ in
+        self?.activityIndicator.stopAnimating()
       })
       .disposed(by: disposeBag)
     

@@ -13,9 +13,9 @@ extension RepoListVC: View {
       .disposed(by: disposeBag)
     
     tableView.rx.itemSelected
-      .subscribe(onNext: { [self] item in
+      .subscribe(onNext: { [weak self] item in
         let currentItem = reactor.currentState.repositories[item.item]
-        self.router.openDetail(repo: currentItem)
+        self?.router.openDetail(repo: currentItem)
       })
       .disposed(by: disposeBag)
     
@@ -26,9 +26,9 @@ extension RepoListVC: View {
     
     state.map(\.isLoading)
       .filter { $0 == false }
-      .bind { [self] _ in
-        activityIndicator.stopAnimating()
-        tableView.isHidden = false
+      .bind { [weak self] _ in
+        self?.activityIndicator.stopAnimating()
+        self?.tableView.isHidden = false
       }
       .disposed(by: disposeBag)
     

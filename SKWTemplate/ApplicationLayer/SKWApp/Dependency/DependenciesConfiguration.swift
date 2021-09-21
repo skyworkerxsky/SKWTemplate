@@ -14,7 +14,7 @@ public protocol DependenciesConfiguration: AnyObject {
 
 class DependenciesConfigurationBase: DependenciesConfiguration {
   private var options: [UIApplication.LaunchOptionsKey: Any]?
-
+  
   init(launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
     self.options = launchOptions
   }

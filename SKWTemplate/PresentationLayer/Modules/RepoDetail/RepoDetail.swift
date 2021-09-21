@@ -12,6 +12,12 @@ import WebKit
 
 public final class RepoDetail: UIViewController {
   
+  #if DEBUG
+  deinit {
+    print("❤️ Deinit - ", self)
+  }
+  #endif
+  
   public var disposeBag = DisposeBag()
   
   private(set) lazy var webView: WKWebView = .init()

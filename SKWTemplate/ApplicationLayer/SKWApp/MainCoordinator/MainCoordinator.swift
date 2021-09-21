@@ -16,12 +16,12 @@ open class MainCoordinator {
   open var configuration: DependenciesConfiguration
   open var container: DIContainer
   
-  private var router: AppRouter!
+  private var router: AppRouter
   
   init(configuration: DependenciesConfiguration) {
-      self.configuration = configuration
-      self.container = self.configuration.configuredContainer()
-      self.router = AppRouter()
+    self.configuration = configuration
+    self.container = self.configuration.configuredContainer()
+    self.router = AppRouter()
   }
   
   func start() {
