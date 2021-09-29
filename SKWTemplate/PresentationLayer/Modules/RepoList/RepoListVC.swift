@@ -2,12 +2,10 @@ import UIKit
 import RxSwift
 import PinLayout
 
-public final class RepoListVC: UIViewController {
+final class RepoListVC: BaseCollectionViewController {
   
   var handler: RepoListEventHandler!
   var router: RepoListRoutable!
-  
-  public var disposeBag = DisposeBag()
   
   private(set) lazy var activityIndicator: UIActivityIndicatorView = {
     let activityIndicator: UIActivityIndicatorView = .init()

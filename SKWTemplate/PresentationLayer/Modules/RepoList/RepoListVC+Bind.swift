@@ -3,6 +3,7 @@ import RxCocoa
 import RxSwift
 
 extension RepoListVC: View {
+  
   public func bind(reactor: RepoListVCReactor) {
     let state = reactor.state.distinctUntilChanged().share(replay: 1)
     

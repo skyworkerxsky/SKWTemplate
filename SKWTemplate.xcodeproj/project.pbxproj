@@ -34,6 +34,11 @@
 		49824E0D26F0C2EA0051C7BF /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49824E0C26F0C2EA0051C7BF /* AppRouter.swift */; };
 		4982A1C726C2515D0051C3FD /* AppPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982A1C626C2515D0051C3FD /* AppPart.swift */; };
 		4982A1C926C275090051C3FD /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982A1C826C275090051C3FD /* RepositoryService.swift */; };
+		499D022D26F9CBAD0006C266 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499D022C26F9CBAD0006C266 /* BaseViewController.swift */; };
+		499D023126F9EB190006C266 /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499D023026F9EB190006C266 /* BaseCollectionView.swift */; };
+		499D023326F9ED690006C266 /* AdapterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499D023226F9ED690006C266 /* AdapterManager.swift */; };
+		499D023826F9F3610006C266 /* RepoCellAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499D023526F9F3610006C266 /* RepoCellAdapter.swift */; };
+		499D023A26F9F3610006C266 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499D023726F9F3610006C266 /* RepoCell.swift */; };
 		49B9425D26EF3DDA003C3BC5 /* RepoListReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9425C26EF3DDA003C3BC5 /* RepoListReactor.swift */; };
 		49C1D5CE26F48EE900689393 /* RepoListVC+Binders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1D5CD26F48EE900689393 /* RepoListVC+Binders.swift */; };
 		49C1D5D326F4A41300689393 /* RepoDetail+Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1D5D226F4A41300689393 /* RepoDetail+Handlers.swift */; };
@@ -48,6 +53,7 @@
 		49CAA1B126EF1C54008D58F2 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 49CAA1B026EF1C54008D58F2 /* PinLayout */; };
 		49CAA1B426EF1E9A008D58F2 /* DITranquillity in Frameworks */ = {isa = PBXBuildFile; productRef = 49CAA1B326EF1E9A008D58F2 /* DITranquillity */; };
 		49F4D18E26BD5D8B00F26C0C /* RepoListVC+Bind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4D18D26BD5D8B00F26C0C /* RepoListVC+Bind.swift */; };
+		AA8FBB793608196B35FF1BD2 /* Pods_SKWTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DBA29A4BF18C56B80FA367 /* Pods_SKWTemplate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +86,11 @@
 		49824E0C26F0C2EA0051C7BF /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		4982A1C626C2515D0051C3FD /* AppPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPart.swift; sourceTree = "<group>"; };
 		4982A1C826C275090051C3FD /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
+		499D022C26F9CBAD0006C266 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		499D023026F9EB190006C266 /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
+		499D023226F9ED690006C266 /* AdapterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterManager.swift; sourceTree = "<group>"; };
+		499D023526F9F3610006C266 /* RepoCellAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCellAdapter.swift; sourceTree = "<group>"; };
+		499D023726F9F3610006C266 /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
 		49B9425C26EF3DDA003C3BC5 /* RepoListReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListReactor.swift; sourceTree = "<group>"; };
 		49C1D5CD26F48EE900689393 /* RepoListVC+Binders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoListVC+Binders.swift"; sourceTree = "<group>"; };
 		49C1D5D226F4A41300689393 /* RepoDetail+Handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoDetail+Handlers.swift"; sourceTree = "<group>"; };
@@ -87,6 +98,9 @@
 		49C1D5D626F4A47600689393 /* RepoDetail+Contracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoDetail+Contracts.swift"; sourceTree = "<group>"; };
 		49C3622726F0810E001E69B8 /* RepoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoError.swift; sourceTree = "<group>"; };
 		49F4D18D26BD5D8B00F26C0C /* RepoListVC+Bind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoListVC+Bind.swift"; sourceTree = "<group>"; };
+		89C3E1F9869BF7C2AFF17A78 /* Pods-SKWTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKWTemplate.debug.xcconfig"; path = "Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate.debug.xcconfig"; sourceTree = "<group>"; };
+		A9DBA29A4BF18C56B80FA367 /* Pods_SKWTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKWTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B22111105C802DBC10887A9A /* Pods-SKWTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKWTemplate.release.xcconfig"; path = "Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +115,7 @@
 				49CAA1A426EF1B90008D58F2 /* Moya in Frameworks */,
 				49CAA1AE26EF1C1C008D58F2 /* ReactorKit in Frameworks */,
 				49CAA1B126EF1C54008D58F2 /* PinLayout in Frameworks */,
+				AA8FBB793608196B35FF1BD2 /* Pods_SKWTemplate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +197,8 @@
 			children = (
 				4954724426BD07500025B227 /* SKWTemplate */,
 				4954724326BD07500025B227 /* Products */,
+				69EE30492FE20DD79F83A9F1 /* Pods */,
+				65E1502A57B88CDEDB72B05B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -237,6 +254,7 @@
 		4954725C26BD09A80025B227 /* RepoList */ = {
 			isa = PBXGroup;
 			children = (
+				499D023426F9F3430006C266 /* Cell */,
 				49C1D5CC26F48ECD00689393 /* Rx */,
 				49C3622626F08077001E69B8 /* Common */,
 				49B9425C26EF3DDA003C3BC5 /* RepoListReactor.swift */,
@@ -253,8 +271,8 @@
 		496884AA26F1E459002B7F1A /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
-				496884AB26F1E463002B7F1A /* Router.swift */,
-				496884AF26F1E54E002B7F1A /* PushRouter.swift */,
+				499D022A26F9CB8D0006C266 /* BaseRouter */,
+				499D022B26F9CB990006C266 /* BaseViewController */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -309,6 +327,34 @@
 			path = Dependency;
 			sourceTree = "<group>";
 		};
+		499D022A26F9CB8D0006C266 /* BaseRouter */ = {
+			isa = PBXGroup;
+			children = (
+				496884AB26F1E463002B7F1A /* Router.swift */,
+				496884AF26F1E54E002B7F1A /* PushRouter.swift */,
+			);
+			path = BaseRouter;
+			sourceTree = "<group>";
+		};
+		499D022B26F9CB990006C266 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				499D022C26F9CBAD0006C266 /* BaseViewController.swift */,
+				499D023026F9EB190006C266 /* BaseCollectionView.swift */,
+				499D023226F9ED690006C266 /* AdapterManager.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		499D023426F9F3430006C266 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				499D023526F9F3610006C266 /* RepoCellAdapter.swift */,
+				499D023726F9F3610006C266 /* RepoCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		49C1D5CC26F48ECD00689393 /* Rx */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +371,23 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		65E1502A57B88CDEDB72B05B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9DBA29A4BF18C56B80FA367 /* Pods_SKWTemplate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		69EE30492FE20DD79F83A9F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89C3E1F9869BF7C2AFF17A78 /* Pods-SKWTemplate.debug.xcconfig */,
+				B22111105C802DBC10887A9A /* Pods-SKWTemplate.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -332,9 +395,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4954725626BD07520025B227 /* Build configuration list for PBXNativeTarget "SKWTemplate" */;
 			buildPhases = (
+				2A3E3BC99ACB31E00FB04B42 /* [CP] Check Pods Manifest.lock */,
 				4954723E26BD07500025B227 /* Sources */,
 				4954723F26BD07500025B227 /* Frameworks */,
 				4954724026BD07500025B227 /* Resources */,
+				1999DC4FCD0906B34046AE3D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -405,6 +470,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1999DC4FCD0906B34046AE3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SKWTemplate/Pods-SKWTemplate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A3E3BC99ACB31E00FB04B42 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SKWTemplate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4954723E26BD07500025B227 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -412,9 +519,12 @@
 			files = (
 				496884C326F35357002B7F1A /* RepoDetail+Binders.swift in Sources */,
 				49C1D5D326F4A41300689393 /* RepoDetail+Handlers.swift in Sources */,
+				499D022D26F9CBAD0006C266 /* BaseViewController.swift in Sources */,
 				49824DFD26F09F3C0051C7BF /* MainCoordinator.swift in Sources */,
 				49824E0126F0A7490051C7BF /* RepoDetail.swift in Sources */,
+				499D023A26F9F3610006C266 /* RepoCell.swift in Sources */,
 				4912EDC026C0E56900E9121E /* RepositoryRequest.swift in Sources */,
+				499D023326F9ED690006C266 /* AdapterManager.swift in Sources */,
 				4982A1C926C275090051C3FD /* RepositoryService.swift in Sources */,
 				496884B026F1E54E002B7F1A /* PushRouter.swift in Sources */,
 				49824E0726F0B8080051C7BF /* DependenciesConfiguration.swift in Sources */,
@@ -435,6 +545,7 @@
 				49B9425D26EF3DDA003C3BC5 /* RepoListReactor.swift in Sources */,
 				496884B626F1ED6D002B7F1A /* RepoListVCPresenter.swift in Sources */,
 				4912EDC826C1093F00E9121E /* RepoResponseModel.swift in Sources */,
+				499D023826F9F3610006C266 /* RepoCellAdapter.swift in Sources */,
 				4954724A26BD07500025B227 /* RepoListVC.swift in Sources */,
 				49C1D5D726F4A47600689393 /* RepoDetail+Contracts.swift in Sources */,
 				4982A1C726C2515D0051C3FD /* AppPart.swift in Sources */,
@@ -442,6 +553,7 @@
 				4954724626BD07500025B227 /* AppDelegate.swift in Sources */,
 				493679BD26EF700A00EC62B9 /* ErrorHandling.swift in Sources */,
 				49F4D18E26BD5D8B00F26C0C /* RepoListVC+Bind.swift in Sources */,
+				499D023126F9EB190006C266 /* BaseCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +689,7 @@
 		};
 		4954725726BD07520025B227 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89C3E1F9869BF7C2AFF17A78 /* Pods-SKWTemplate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -596,6 +709,7 @@
 		};
 		4954725826BD07520025B227 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B22111105C802DBC10887A9A /* Pods-SKWTemplate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

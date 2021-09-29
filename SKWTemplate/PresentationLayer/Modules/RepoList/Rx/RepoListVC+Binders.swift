@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 extension Reactive where Base: RepoListVC {
-  public var scrollLoad: Binder<UnsafeMutablePointer<CGPoint>> {
+  internal var scrollLoad: Binder<UnsafeMutablePointer<CGPoint>> {
     
     Binder(base) { repoListVC, targetContentOffset in
       guard let page = repoListVC.reactor?.currentState.page,
